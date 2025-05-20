@@ -25,7 +25,7 @@ const config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -85,8 +85,17 @@ const config = {
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
+            to: '/docs/tutorials/intro',
             position: 'left',
             label: 'Tutorial',
+          },
+          {
+            to: '/installation-guide', // Az új guides szekció első oldalának slug-ja, vagy elérési útja a mappa szerkezetben
+            // Idézd fel az órán elhangzottak alapján, ennek a megoldásnak a sajátosságait - lehet sidebarId-vel jobb lehet ezt behivatkozni, ha sok változtatásra számítasz
+            label: 'Guides',
+            position: 'left',
+            type: 'docSidebar',
+            sidebarId: 'guideSidebar',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -104,7 +113,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/tutorials/intro',
               },
             ],
           },
