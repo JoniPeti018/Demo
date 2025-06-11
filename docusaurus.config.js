@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -34,6 +34,11 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+
+  // Mermaid támogatás engedélyezése
+  markdown: {
+    mermaid: true,
   },
 
   presets: [
@@ -91,13 +96,59 @@ const config = {
       }
     ]
   ],
-  themes: ['docusaurus-theme-openapi-docs'],
+
+  // Témák hozzáadása - Mermaid téma hozzáadása
+  themes: ['docusaurus-theme-openapi-docs', '@docusaurus/theme-mermaid'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+
+      // Mermaid konfiguráció (opcionális)
+      mermaid: {
+        theme: { light: 'neutral', dark: 'dark' },
+        options: {
+          maxTextSize: 90000,
+          maxWidth: 200,
+          fontFamily: 'trebuchet ms, verdana, arial, sans-serif',
+          fontSize: 16,
+          // Diagram típus specifikus beállítások
+          flowchart: {
+            htmlLabels: false,
+            curve: 'basis',
+            useMaxWidth: false,
+          },
+          sequence: {
+            diagramMarginX: 50,
+            diagramMarginY: 10,
+            actorMargin: 50,
+            width: 150,
+            height: 65,
+            boxMargin: 10,
+            boxTextMargin: 5,
+            noteMargin: 10,
+            messageMargin: 35,
+            mirrorActors: true,
+            bottomMarginAdj: 1,
+            useMaxWidth: false,
+          },
+          gantt: {
+            titleTopMargin: 25,
+            barHeight: 20,
+            fontFamily: 'trebuchet ms, verdana, arial, sans-serif',
+            fontSize: 11,
+            fontWeight: 'normal',
+            sidePadding: 75,
+            leftPadding: 75,
+            gridLineStartPadding: 35,
+            bottomPadding: 25,
+            useMaxWidth: false,
+          }
+        },
+      },
+
       navbar: {
         title: 'My Site',
         logo: {
@@ -113,6 +164,13 @@ const config = {
             label: 'Tutorial',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'dbrSidebar',
+            to: '/docs/dbr/allrates-ratedownloader/allrates_hu',
+            position: 'left',
+            label: 'DBR',
+          },
+          {
             to: '/installation-guide', // Az új guides szekció első oldalának slug-ja, vagy elérési útja a mappa szerkezetben
             // Idézd fel az órán elhangzottak alapján, ennek a megoldásnak a sajátosságait - lehet sidebarId-vel jobb lehet ezt behivatkozni, ha sok változtatásra számítasz
             label: 'Guides',
@@ -126,7 +184,7 @@ const config = {
             label: 'Petstore API',
             position: 'left',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
