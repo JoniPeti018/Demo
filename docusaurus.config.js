@@ -10,20 +10,22 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '4. Házi by: Jónás Péter',
-  tagline: 'Ez az oldal a 4. házi feladathoz tartozó Docusaurus projektet foglalja magában.',
+  title: 'Demó',
+  tagline: 'Demó a Docusaurus környezetről és az OpenAPI dokumentációról',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://JoniPeti018.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  // GitHub pages deployment config.
+  // baseUrl: '/Demo/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'JoniPeti018', // Usually your GitHub org/user name.
+  projectName: 'Demo', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -150,19 +152,12 @@ const config = {
       },
 
       navbar: {
-        title: 'My Site',
+        title: 'Főoldal',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            to: '/docs/tutorials/intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
           {
             type: 'docSidebar',
             sidebarId: 'dbrSidebar',
@@ -171,20 +166,11 @@ const config = {
             label: 'DBR',
           },
           {
-            to: '/installation-guide', // Az új guides szekció első oldalának slug-ja, vagy elérési útja a mappa szerkezetben
-            // Idézd fel az órán elhangzottak alapján, ennek a megoldásnak a sajátosságait - lehet sidebarId-vel jobb lehet ezt behivatkozni, ha sok változtatásra számítasz
-            label: 'Guides',
-            position: 'left',
-            type: 'docSidebar',
-            sidebarId: 'guideSidebar',
-          },
-          {
             type: 'docSidebar', // Ha külön oldalsávot használsz az API-hoz
             sidebarId: 'myApiSidebar', // Az API oldalsávjának ID-ja a sidebars.js-ből
             label: 'Petstore API',
             position: 'left',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -199,8 +185,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/tutorials/intro',
+                label: 'DBR',
+                to: '/docs/dbr/allrates-ratedownloader/allrates_hu',
               },
             ],
           },
