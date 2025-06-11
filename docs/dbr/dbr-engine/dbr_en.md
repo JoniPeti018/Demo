@@ -1,3 +1,7 @@
+---
+title: DBR project documentation
+---
+
 # DBR Project Documentation
 
 ## 1. Project Overview

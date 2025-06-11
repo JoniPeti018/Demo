@@ -1,3 +1,7 @@
+---
+title: revard distribution system
+---
+
 # Reward Distribution System
 
 ## Project Purpose & Overview

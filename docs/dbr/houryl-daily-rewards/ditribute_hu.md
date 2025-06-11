@@ -1,3 +1,7 @@
+---
+title: jutalomelosztó rendszer
+---
+
 # Jutalomelosztó Rendszer
 
 ## Projekt célja és áttekintése

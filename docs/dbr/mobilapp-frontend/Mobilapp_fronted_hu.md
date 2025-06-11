@@ -1,3 +1,7 @@
+---
+title: dbrindex projekt dokumentáció
+---
+
 # DBR Index Projekt Dokumentáció
 
 ## 1. Projekt áttekintés & Architektúra

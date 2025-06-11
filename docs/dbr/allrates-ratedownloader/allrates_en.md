@@ -1,3 +1,7 @@
+---
+title: rc.smarti.me documentation
+---
+
 # RC Smarti Me Documentation
 
 ## Project Overview

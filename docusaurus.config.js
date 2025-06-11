@@ -11,7 +11,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Demó',
-  tagline: 'Demó a Docusaurus környezetről és az OpenAPI dokumentációról',
+  tagline: 'Demó a Docusaurus környezetről és az OpenAPI dokumentációról, integrált Mermaid diagramokkal',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -176,14 +176,15 @@ const config = {
           },
           {
             type: 'docSidebar', // Ha külön oldalsávot használsz az API-hoz
-            sidebarId: 'myApiSidebar', // Az API oldalsávjának ID-ja a sidebars.js-ből
-            label: 'Petstore API',
-            position: 'left',
-          },
-          {
-            type: 'docSidebar', // Ha külön oldalsávot használsz az API-hoz
             sidebarId: 'dbrApiSidebar', // Az API oldalsávjának ID-ja a sidebars.js-ből
             label: 'DBR API',
+            position: 'left',
+          },
+
+          {
+            type: 'docSidebar', // Ha külön oldalsávot használsz az API-hoz
+            sidebarId: 'myApiSidebar', // Az API oldalsávjának ID-ja a sidebars.js-ből
+            label: 'Petstore API (minta)',
             position: 'left',
           },
           {
@@ -197,11 +198,15 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Dokumentáció',
             items: [
               {
                 label: 'DBR',
                 to: '/docs/dbr/allrates-ratedownloader/allrates_hu',
+              },
+              {
+                label: 'DBR API',
+                to: '/docs/dbrapi/dbr-api-server',
               },
             ],
           },
@@ -236,7 +241,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} DBR Demó projekt, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

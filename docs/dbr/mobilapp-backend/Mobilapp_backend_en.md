@@ -1,3 +1,7 @@
+---
+title: dbrapi0.smarti.me API server
+---
+
 # dbrapi0.smarti.me – Backend API Server
 
 ## Overview

@@ -1,3 +1,7 @@
+---
+title: rc.smarti.me dokumentáció
+---
+
 # RC Smarti Me Dokumentáció
 
 ## Projekt Áttekintés

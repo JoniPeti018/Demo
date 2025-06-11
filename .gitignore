@@ -21,3 +21,4 @@ yarn-error.log*
 
 # Generated API docs
 docs/petstore
+docs/dbrapi

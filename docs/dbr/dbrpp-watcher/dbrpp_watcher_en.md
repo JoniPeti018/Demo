@@ -1,3 +1,7 @@
+---
+title: dbrpp_watcher project documentation
+---
+
 # dbrpp_watcher Project Documentation
 
 ## 1. Project Introduction

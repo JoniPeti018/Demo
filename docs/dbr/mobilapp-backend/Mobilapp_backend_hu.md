@@ -1,3 +1,7 @@
+---
+title: dbrapi0.smarti.me API szerver
+---
+
 # dbrapi0.smarti.me – Backend API szerver
 
 ## Áttekintés

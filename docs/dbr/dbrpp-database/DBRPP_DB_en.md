@@ -1,3 +1,7 @@
+---
+title: dbrpp_db project documentation
+---
+
 # dbrpp_db Project Documentation
 
 ## High-Level Overview

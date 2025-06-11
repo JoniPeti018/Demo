@@ -1,3 +1,7 @@
+---
+title: dbrpp_db projekt dokumentáció
+---
+
 # dbrpp_db Projekt Dokumentáció
 
 ## Áttekintés

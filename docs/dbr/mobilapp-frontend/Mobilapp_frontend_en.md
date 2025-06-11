@@ -1,3 +1,7 @@
+---
+title: dbrindex project documentation
+---
+
 # DBR Index Project Documentation
 
 ## 1. Project Overview & Architecture
