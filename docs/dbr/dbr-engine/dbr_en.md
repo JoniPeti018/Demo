@@ -2,7 +2,9 @@
 
 ## 1. Project Overview
 
-The DBR project is a data analytics and processing system designed to aggregate, analyze, and report on financial asset rates and user voting data. Its main goal is to compute rolling averages, daily statistics, and optimal values for a set of tracked assets (such as oil, EUR, gold, BTC), while handling user input and ensuring data integrity. The system ingests raw rates and votes, processes them through a series of calculations, and stores results in a relational database. Key concepts include assets, rates, DBR (Dynamic Base Rate), and user voting. The data flows from ingestion, through averaging and statistics computation, to reporting and notification.
+The DBR project is a data analytics and processing system designed to aggregate, analyze, and report on financial asset rates and user voting data. Its main goal is to compute rolling averages, daily statistics, and optimal values for a set of tracked assets (such as oil, EUR, gold, BTC), while handling user input and ensuring data integrity. 
+
+The system ingests raw rates and votes, processes them through a series of calculations, and stores results in a relational database. `Key concepts include assets, rates, DBR (Dynamic Base Rate), and user voting.` The data flows from ingestion, through averaging and statistics computation, to reporting and notification.
 
 ## 2. Architecture Diagram
 

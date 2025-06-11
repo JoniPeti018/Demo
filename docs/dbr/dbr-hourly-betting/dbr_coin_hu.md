@@ -2,7 +2,7 @@
 
 ## Áttekintés
 
-A DBRCoin API Szerver egy Fastify-alapú Node.js REST API, amely óránkénti kriptovaluta jutalom adatokat szolgáltat MySQL adatbázisból. TypeScript-ben íródott, környezeti változókat használ, és API kulcs alapú biztonságot alkalmaz.
+A DBRCoin API Szerver egy `Fastify-alapú Node.js REST API`, amely óránkénti kriptovaluta jutalom adatokat szolgáltat MySQL adatbázisból. TypeScript-ben íródott, környezeti változókat használ, és API kulcs alapú biztonságot alkalmaz.
 
 ## Használt technológiák
 
@@ -91,18 +91,18 @@ A `cc_hourly` tábla óránkénti jutalom adatokat tárol partnerekhez.
 ## Biztonság
 
 - Minden végpont érvényes API kulcsot igényel a `x-api-key` fejlécben.
-- Az adatbázis elérési adatok és API kulcs a `.env` fájlban található.
+- Az adatbázis elérési adatok és az API kulcs a `.env` fájlban található.
 
 ## Konfiguráció
 
 A következőket állítsd be a `.env` fájlban:
 
 ```
-DB_HOST=...
-DB_USER=...
-DB_PASSWORD=...
-DB_DATABASE=...
-API_KEY=...
+DB_HOST             =   <adatbázis_host>
+DB_USER             =   <adatbázis_felhasználó>
+DB_PASSWORD         =   <adatbázis_jelszó>
+DB_DATABASE         =   <adatbázis_név>
+API_KEY             =   <sajat_api_kulcs>
 ```
 
 ## Szerver indítása
@@ -180,6 +180,6 @@ erDiagram
 
 ---
 
-# Licenc
+## Licenc
 
-MIT
+A projekt az MIT licenc alatt érhető el. Részletekért lásd a `LICENSE` fájlt.

@@ -2,7 +2,7 @@
 
 ## Overview
 
-DBRCoin API Server is a Fastify-based Node.js REST API for retrieving hourly cryptocurrency reward data from a MySQL database. It is written in TypeScript, uses environment-based configuration, and enforces API key security.
+DBRCoin API Server is a `Fastify-based Node.js REST API` for retrieving hourly cryptocurrency reward data from a MySQL database. It is written in TypeScript, uses environment-based configuration, and enforces API key security.
 
 ## Technologies Used
 
@@ -91,18 +91,18 @@ The `cc_hourly` table stores hourly reward data for partners.
 ## Security
 
 - All endpoints require a valid API key via the `x-api-key` header.
-- Database credentials and API keys are stored in `.env`.
+- Database credentials and the API keys are stored in `.env`.
 
 ## Configuration
 
 Set the following in your `.env` file:
 
 ```
-DB_HOST=...
-DB_USER=...
-DB_PASSWORD=...
-DB_DATABASE=...
-API_KEY=...
+DB_HOST             =   <database_host>
+DB_USER             =   <database_user>
+DB_PASSWORD         =   <database_password>
+DB_DATABASE         =   <database_name>
+API_KEY             =   <your_api_key>
 ```
 
 ## Running the Server
@@ -180,6 +180,6 @@ erDiagram
 
 ---
 
-# License
+## License
 
-MIT
+This project is licensed under the MIT License. See the `LICENSE` file for details.

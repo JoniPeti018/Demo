@@ -4,6 +4,7 @@
 
 A Jutalomelosztó Rendszer automatizálja a partnerek szavazási aktivitása alapján járó jutalmak kiszámítását és kiosztását. Fő felhasználói a partnerprogram üzemeltetői és maguk a partnerek. A rendszer célja a részvételen alapuló, igazságos, átlátható és auditálható jutalomelosztás biztosítása, rögzített és dinamikus szabályok keverékével.
 
+**Cél:**
 - Óránkénti és napi jutalomszámítás automatizálása
 - Szavazók részvételének és jogosultságának nyomon követése
 - Eredmények mentése MySQL adatbázisba audit és riport céljából
@@ -50,27 +51,27 @@ A Jutalomelosztó Rendszer automatizálja a partnerek szavazási aktivitása ala
 
 ### Adatbázis elérés
 
-- Olvasás: Szavazási adatok, CC árfolyamok és előző állapotok SQL lekérdezéssel
-- Írás: Jutalmak, naplók és állapotok upsert és insert műveletekkel
-- Speciális partnerek: Óránkénti jutalmak összegezve, távoli adatbázisba továbbítva
+- **Olvasás:** Szavazási adatok, CC árfolyamok és előző állapotok SQL lekérdezéssel
+- **Írás:** Jutalmak, naplók és állapotok upsert és insert műveletekkel
+- **Speciális partnerek:** Óránkénti jutalmak összegezve, távoli adatbázisba továbbítva
 
 ## Jutalmazási logika
 
 ### Óránkénti jutalmak
 
-- Az alap 5 egyenlő kategóriára oszlik: legjobb 10%, legjobb 10, legjobb 100, legjobb 1000, mindenki
+- **Az alap 5 egyenlő kategóriára oszlik:** legjobb 10%, legjobb 10, legjobb 100, legjobb 1000, mindenki
 - A jutalmak kiosztása a partner helyezése alapján történik
-- Jogosultság: Csak az utolsó órában szavazók vehetnek részt
+- **Jogosultság:** Csak az utolsó órában szavazók vehetnek részt
 
 ### Napi jutalmak
 
 - Az ECC limit a legjobb 10% partnerek átlagos ECC-jének 5-szöröse
-- Az alap felosztása:
+- **Az alap felosztása:**
     - Fix helyezésű jutalmak (felső kategóriák, minimum szavazatszám szükséges)
     - ECC-alapú jutalmak (korlátozott ECC súlyozással)
     - Legjobb 50% részvételi jutalom
     - CC piaci árfolyam bónusz
-- Jogosultság: Minimum szavazatszám és részvételi küszöb
+- **Jogosultság:** Minimum szavazatszám és részvételi küszöb
 
 ### Speciális partnerek
 
@@ -107,10 +108,10 @@ A Jutalomelosztó Rendszer automatizálja a partnerek szavazási aktivitása ala
 
 ## Üzemeltetés
 
-- Követelmények: Python 3.8+, MySQL, függőségek a `requirements.txt`-ben
-- Telepítés: `python distribute.py` futtatása ütemezett szolgáltatásként
-- Leállítás/Újraindítás: Folyamatkövetés a `processes.json`-ban, szignálkezelők a biztonságos leállításhoz
-- Frissítés: Állítsd le a szolgáltatást, frissítsd a kódot/függőségeket, indítsd újra
+- **Követelmények:** Python 3.8+, MySQL, függőségek a `requirements.txt`-ben
+- **Telepítés:** `python distribute.py` futtatása ütemezett szolgáltatásként
+- **Leállítás/Újraindítás:** Folyamatkövetés a `processes.json`-ban, szignálkezelők a biztonságos leállításhoz
+- **Frissítés:** Állítsd le a szolgáltatást, frissítsd a kódot/függőségeket, indítsd újra
 
 ## Tesztelés
 

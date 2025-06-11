@@ -2,9 +2,12 @@
 
 ## 1. Projekt bemutatása
 
-**Cél:** A `dbrpp_watcher` egy Python-alapú monitorozó eszköz, amely rendszeresen ellenőrzi egy MySQL adatbázis (különösen a "dbrpp" adatbázis) adatainak frissességét.  
+**Cél:** A `dbrpp_watcher` egy Python-alapú monitorozó eszköz, amely rendszeresen ellenőrzi egy MySQL adatbázis (különösen a "dbrpp" adatbázis) adatainak frissességét.
+
 **Megoldott probléma:** Automatizáltan észleli az adatkimaradást vagy elavulást, Discordon értesíti az illetékeseket, és biztosítja a publikus és privát adatok naprakészségét.  
+
 **Célközönség:** Adatbázis-adminisztrátorok, adatmérnökök, üzemeltetők.  
+
 **Fő funkciók:**
 - Ütemezett ellenőrzések publikus és privát adatokra
 - Automatikus Discord értesítés problémák esetén
@@ -74,19 +77,19 @@ graph TD
 **Beállítás:** Másold a `.env`-t a projekt gyökérbe, töltsd ki az adatokat.
 
 ```env
-MYSQL_PORT=3306
-MYSQL_HOST_DBR="localhost"
-MYSQL_USER_DBR="user"
-MYSQL_PASSWORD_DBR="password"
-MYSQL_DATABASE_DBR="DBR"
+MYSQL_PORT            =   3306
+MYSQL_HOST_DBR        =   "localhost"
+MYSQL_USER_DBR        =   "user"
+MYSQL_PASSWORD_DBR    =   "password"
+MYSQL_DATABASE_DBR    =   "DBR"
 ...
-DC_WEBHOOK_URL="https://discord.com/api/webhooks/..."
+DC_WEBHOOK_URL        =   "https://discord.com/api/webhooks/..."
 ```
 
 ## 5. Naplózás
 
 - A naplózást a `conf_log.py` és `init_log()` inicializálja
-- A naplók a `logs/` könyvtárba kerülnek, forgatással
+- A naplók a `logs/` könyvtárba kerülnek
 - A naplózási szint és formátum módosítható a `dbrpp_watcher.py` és `conf_log.py` fájlokban
 
 ## 6. Adatbázis integráció

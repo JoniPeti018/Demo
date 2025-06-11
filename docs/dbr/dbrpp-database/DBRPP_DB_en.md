@@ -2,7 +2,7 @@
 
 ## High-Level Overview
 
-The **dbrpp_db** project is a data processing and database management system supporting a mobile application. It ingests, processes, and stores both public and private data, providing up-to-date statistics and analytics. The system is composed of several Python modules for data loading, calculation, database access, and logging, orchestrated by the `dbrpp_calc` script, which can be run in various modes (debug, run, schedule).
+The **dbrpp_db** project is a data processing and database management system supporting a mobile application. It ingests, processes, and stores both public and private data, providing up-to-date statistics and analytics. The system is composed of several Python modules for `data loading, calculation, database access, and logging`, orchestrated by the `dbrpp_calc` script, which can be run in various modes `(debug, run, schedule)`.
 
 ## Setup and Installation
 

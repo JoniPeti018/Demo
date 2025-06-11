@@ -3,8 +3,11 @@
 ## 1. Project Introduction
 
 **Purpose:** The `dbrpp_watcher` project is a Python-based monitoring tool designed to periodically check the status and freshness of data in a MySQL database (specifically, the "dbrpp" database).  
+
 **Problem Solved:** It automates the detection of data outages or staleness, notifies stakeholders via Discord, and ensures that both public and private data are kept up to date.  
+
 **Target Audience:** Database administrators, data engineers, and operations teams responsible for the "dbrpp" data pipeline.  
+
 **Main Features:**
 - Scheduled checks for public and private data freshness
 - Automatic notification to Discord on issues
@@ -74,13 +77,13 @@ graph TD
 **Setup:** Copy `.env` to the project root and fill in your credentials.
 
 ```env
-MYSQL_PORT=3306
-MYSQL_HOST_DBR="localhost"
-MYSQL_USER_DBR="user"
-MYSQL_PASSWORD_DBR="password"
-MYSQL_DATABASE_DBR="DBR"
+MYSQL_PORT            =   3306
+MYSQL_HOST_DBR        =   "localhost"
+MYSQL_USER_DBR        =   "user"
+MYSQL_PASSWORD_DBR    =   "password"
+MYSQL_DATABASE_DBR    =   "DBR"
 ...
-DC_WEBHOOK_URL="https://discord.com/api/webhooks/..."
+DC_WEBHOOK_URL        =   "https://discord.com/api/webhooks/..."
 ```
 
 ## 5. Logging

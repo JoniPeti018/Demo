@@ -6,7 +6,7 @@ RC Smarti Me is a Python-based project designed to interact with multiple financ
 
 This project is ideal for developers and financial analysts who need to work with real-time financial data and perform historical analysis.
 
-**Technologies used:** Python, MySQL, Binance, Bitfinex, Bitstamp, and Capital APIs.
+**Technologies used:** `Python, MySQL, Binance, Bitfinex, Bitstamp, and Capital APIs.`
 
 ---
 
@@ -32,15 +32,15 @@ This project is ideal for developers and financial analysts who need to work wit
 3. **Set up environment variables:**
     - Create a `.env` file in the root directory with:
     ```
-    WEBHOOK_URL=<your_discord_webhook_url>
-    MYSQL_HOST=<your_database_host>
-    MYSQL_USER=<your_database_user>
-    MYSQL_PASSWORD=<your_database_password>
-    MYSQL_DATABASE_RATES=<your_database_name>
-    CAPITAL_API_KEY=<your_capital_api_key>
-    CAPITAL_IDENTIFIER=<your_capital_identifier>
-    CAPITAL_PASSWORD=<your_capital_password>
-    CAPITAL_WATCHLIST_ID=<your_watchlist_id>
+    WEBHOOK_URL             =       <your_discord_webhook_url>
+    MYSQL_HOST              =       <your_database_host>
+    MYSQL_USER              =       <your_database_user>
+    MYSQL_PASSWORD          =       <your_database_password>
+    MYSQL_DATABASE_RATES    =       <your_database_name>
+    CAPITAL_API_KEY         =       <your_capital_api_key>
+    CAPITAL_IDENTIFIER      =       <your_capital_identifier>
+    CAPITAL_PASSWORD        =       <your_capital_password>
+    CAPITAL_WATCHLIST_ID    =       <your_watchlist_id>
     ```
 4. **(Optional) Set up a virtual environment:**
     ```bash

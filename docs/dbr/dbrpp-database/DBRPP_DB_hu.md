@@ -2,7 +2,7 @@
 
 ## Áttekintés
 
-A **dbrpp_db** projekt egy adatfeldolgozó és adatbázis-kezelő rendszer, amely egy mobilalkalmazást támogat. Nyilvános és privát adatokat olvas be, dolgoz fel és tárol, naprakész statisztikákat és elemzéseket biztosítva. A rendszer több Python modulból áll (adatbetöltés, számítás, adatbázis-kezelés, naplózás), amelyeket a `dbrpp_calc` szkript vezérel, különböző futási módokkal (debug, run, schedule).
+A **dbrpp_db** projekt egy adatfeldolgozó és adatbázis-kezelő rendszer, amely egy mobilalkalmazást támogat. Nyilvános és privát adatokat olvas be, dolgoz fel és tárol, naprakész statisztikákat és elemzéseket biztosítva. A rendszer több Python modulból áll `(adatbetöltés, számítás, adatbázis-kezelés, naplózás)`, amelyeket a `dbrpp_calc` szkript vezérel, különböző futási módokkal `(debug, run, schedule)`.
 
 ## Telepítés
 

@@ -4,6 +4,7 @@
 
 The Reward Distribution System automates the calculation and distribution of rewards to partners based on their voting activity. Its main users are operators of a partner program and the partners themselves. The system solves the business problem of fair, transparent, and auditable reward allocation based on participation, using a mix of fixed and dynamic rules.
 
+**Purpose:**
 - Automates hourly and daily reward calculations
 - Tracks voter participation and eligibility
 - Persists results to MySQL databases for auditing and reporting
@@ -50,27 +51,27 @@ The Reward Distribution System automates the calculation and distribution of rew
 
 ### Database Access
 
-- Reads: Voting data, CC rates, and previous pool states are read via SQL queries
-- Writes: Rewards, logs, and pool states are written using upserts and inserts
-- Special partners: Hourly rewards are summed and transferred to a remote database
+- **Reads:** Voting data, CC rates, and previous pool states are read via SQL queries
+- **Writes:** Rewards, logs, and pool states are written using upserts and inserts
+- **Special partners:** Hourly rewards are summed and transferred to a remote database
 
 ## Reward Logic
 
 ### Hourly Rewards
 
-- Pool is divided into 5 equal categories: top 10%, top 10, top 100, top 1000, all
+- **Pool is divided into 5 equal categories:** top 10%, top 10, top 100, top 1000, all
 - Rewards are assigned based on partner position in the voting results
-- Eligibility: Only partners who voted in the last hour are included
+- **Eligibility:** Only partners who voted in the last hour are included
 
 ### Daily Rewards
 
 - ECC cap is calculated as 5x the average ECC of the top 10% partners
-- Pool is split into:
+- **Pool is split into:**
     - Fixed position rewards (top tiers, require minimum votes)
     - ECC-based rewards (weighted by capped ECC)
     - Top 50% participation rewards
     - CC market rate bonus
-- Eligibility: Minimum vote requirements and participation thresholds
+- **Eligibility:** Minimum vote requirements and participation thresholds
 
 ### Special Partners
 
@@ -107,10 +108,10 @@ The Reward Distribution System automates the calculation and distribution of rew
 
 ## Deployment & Operations
 
-- Requirements: Python 3.8+, MySQL, dependencies in `requirements.txt`
-- Deploy: Run `python distribute.py` as a scheduled service
-- Stop/Restart: Use process tracking in `processes.json` and signal handlers for safe shutdown
-- Upgrade: Stop the service, update code/dependencies, restart
+- **Requirements:** Python 3.8+, MySQL, dependencies in `requirements.txt`
+- **Deploy:** Run `python distribute.py` as a scheduled service
+- **Stop/Restart:** Use process tracking in `processes.json` and signal handlers for safe shutdown
+- **Upgrade:** Stop the service, update code/dependencies, restart
 
 ## Testing
 

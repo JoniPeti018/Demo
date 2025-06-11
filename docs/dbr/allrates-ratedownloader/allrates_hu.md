@@ -6,7 +6,7 @@ Az RC Smarti Me egy Python-alapú projekt, amely több pénzügyi API-val (Binan
 
 A projekt ideális fejlesztők és pénzügyi elemzők számára, akik valós idejű pénzügyi adatokkal dolgoznak és történeti elemzéseket végeznek.
 
-**Felhasznált technológiák:** Python, MySQL, Binance, Bitfinex, Bitstamp és Capital API-k.
+**Felhasznált technológiák:** `Python, MySQL, Binance, Bitfinex, Bitstamp és Capital API-k.`
 
 ---
 
@@ -32,15 +32,15 @@ A projekt ideális fejlesztők és pénzügyi elemzők számára, akik valós id
 3. **Környezeti változók beállítása:**
     - Hozz létre egy `.env` fájlt a gyökérkönyvtárban az alábbi tartalommal:
     ```
-    WEBHOOK_URL=<discord_webhook_urlod>
-    MYSQL_HOST=<adatbázis_host>
-    MYSQL_USER=<adatbázis_felhasználó>
-    MYSQL_PASSWORD=<adatbázis_jelszó>
-    MYSQL_DATABASE_RATES=<adatbázis_név>
-    CAPITAL_API_KEY=<capital_api_kulcs>
-    CAPITAL_IDENTIFIER=<capital_azonosító>
-    CAPITAL_PASSWORD=<capital_jelszó>
-    CAPITAL_WATCHLIST_ID=<watchlist_id>
+    WEBHOOK_URL             =       <discord_webhook_urlod>
+    MYSQL_HOST              =       <adatbázis_host>
+    MYSQL_USER              =       <adatbázis_felhasználó>
+    MYSQL_PASSWORD          =       <adatbázis_jelszó>
+    MYSQL_DATABASE_RATES    =       <adatbázis_név>
+    CAPITAL_API_KEY         =       <capital_api_kulcs>
+    CAPITAL_IDENTIFIER      =       <capital_azonosító>
+    CAPITAL_PASSWORD        =       <capital_jelszó>
+    CAPITAL_WATCHLIST_ID    =       <watchlist_id>
     ```
 4. **(Opcionális) Virtuális környezet létrehozása:**
     ```bash

@@ -2,7 +2,9 @@
 
 ## 1. Projekt Áttekintés
 
-A DBR projekt egy adat-analitikai és feldolgozó rendszer, amely pénzügyi eszközárfolyamok és felhasználói szavazatok aggregálására, elemzésére és riportolására szolgál. Fő célja gördülő átlagok, napi statisztikák és optimális értékek számítása a követett eszközökre (pl. olaj, EUR, arany, BTC), miközben kezeli a felhasználói inputokat és biztosítja az adatintegritást. A rendszer nyers árfolyamokat és szavazatokat fogad, ezeket több lépésben feldolgozza, majd eredményeit relációs adatbázisban tárolja. Fő fogalmak: eszközök, árfolyamok, DBR (Dinamikus Bázisráta), felhasználói szavazás. Az adatok beolvasástól az átlagoláson és statisztikákon át a riportolásig és értesítésig áramlanak.
+A DBR projekt egy adat-analitikai és feldolgozó rendszer, amely pénzügyi eszközárfolyamok és felhasználói szavazatok aggregálására, elemzésére és riportolására szolgál. Fő célja gördülő átlagok, napi statisztikák és optimális értékek számítása a követett eszközökre (pl. olaj, EUR, arany, BTC), miközben kezeli a felhasználói inputokat és biztosítja az adatintegritást.
+
+A rendszer nyers árfolyamokat és szavazatokat fogad, ezeket több lépésben feldolgozza, majd eredményeit relációs adatbázisban tárolja. `Fő fogalmak: eszközök, árfolyamok, DBR (Dinamikus Bázisráta), felhasználói szavazás.` Az adatok beolvasástól az átlagoláson és statisztikákon át a riportolásig és értesítésig áramlanak.
 
 ## 2. Architektúra Diagram
 
