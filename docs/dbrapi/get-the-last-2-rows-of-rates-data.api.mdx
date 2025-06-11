@@ -1,0 +1,71 @@
+---
+id: get-the-last-2-rows-of-rates-data
+title: "Get the last 2 rows of rates data"
+description: "Get the last 2 rows of rates data"
+sidebar_label: "Get the last 2 rows of rates data"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVdtuGjEQ/RVrnp2Q0qiq9o2kVdWLmorQJ4oqszth3XjtjT0LRWj/vRp7E0wKbXgIZDyey5kzxzvw+NBhoCtXbaHYxX+1xwoK8h1KKJ0ltMRHqm2NLhVpZ0e/grNsC2WNjYqnxtzcQTHPf9G2RSjALX9hSSCh9a5FTxpDiqc/Y0w6+AXy2q6g7yWQJsOmD2jR63KaioRe/i+ort5euwqPRe0X+7gfk9tT3EWekibGfFGBxlO3CU8uPdflMbTOhpRrfHHBXxWG0uuWcYECrlTAN5dnaEtXYSU+3d58FRtNtfCKMIhKkYIDWAl/06g1Sp8E9N8dh64sMYSs46VzBpWFXgJ673x+prxXW5CgCZtwFKU9Eu/58nTo+AXYqxw27vYFeU+OMfPRlnCFHmJpzbHZSli7w3zZnfWrE/bxCfvrE/bL43afx7ddsxzM4+Pm18fNl0fNXVspwuqnon/vCcM9dZtoCw9mphv8Prv+3xb8RfXHUSeyHxL7A5KgGoVRgcRYeLcJwt0d0rpBql0FBbQuxKEqqqGA0eowEUgI6NfIzJzvoPMGCqiJ2mI02rrOn6XTMz7gegOWnde0jd6TKBuTjiPPF/nxLe9OYkHutOdgEhwJvGqwZMWTYFWTnXHbrG3TvSq+/62a1mCuWI9oyr3cZFTU9s7FrAPK766mYvLto7iNTYEEbjxh+ur84vwCniM9q3WIN1rv1rrCINBWrdOWgrhzXnQBvVAl6XUUYynWjrRdSWGUXXVqhaJRVq2wQUtStMqT5Qu2Eq0Lmq/EecloWqryHm0lStc0nR30PabhYXPtme6L0GnCczExJqtpeDPEt5vbmRjek5BETyUBZKxjNu7qHrdCdVSjpSFsCvikrUJ5FMsjOpowDuc/orYxxxoVVXMY4ksoegD1EzUyEeatY0LuBvbO4Tl7FxJq5ncxh92O6/zuTd+z+aFDzyxdSFgrr9WSCTBf9BJqVBX6SOD7SKHr9AKczbgAdjdd4uGzR5ZlN92YlCW2lPnmRS+y5eM5gEwEL3bQJIJ6tQEZ/xYAElyEIC5LtO3gkT1QQMrMnz9qvspz
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the last 2 rows of rates data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getAllLast2Rows"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the last 2 rows of rates data
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"id8Code":{"type":"string"}}}],"title":"Id8CodeRequest"}],"title":"GetAllLast2RowsRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with rates data","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"allLast2RowsRates":{"type":"array","items":{"type":"object","properties":{"id":{"type":"integer"},"time":{"type":"string"},"votes":{"type":"integer"},"v1":{"type":"integer"},"v2":{"type":"integer"},"v3":{"type":"integer"},"v4":{"type":"integer"},"r1":{"type":"number"},"r2":{"type":"number"},"r3":{"type":"number"},"r4":{"type":"number"},"updated_at":{"type":"string"}},"title":"RateRow"}},"sqlTimeUTC":{"type":"string"}}}],"title":"GetAllLast2RowsResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

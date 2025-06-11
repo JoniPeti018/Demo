@@ -1,0 +1,71 @@
+---
+id: activate-an-id-8-code-with-additional-details
+title: "Activate an id8 code with additional details"
+description: "Activate an id8 code with additional details"
+sidebar_label: "Activate an id8 code with additional details"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVU1P20AQ/SurOS+EVlVV+RYKqmilUgFVD2kOE+8QL9i7ZncciCz/92p2DXFRaGlzIGI+dmbevDfpIdBdR5GPvdlC0ad/bSADBYeONJTeMTkWF7ZtbUtk693sJnontlhW1GDy1vX5NRSLHnjbEhTgVzdUMmhog28psKWYX7FfKJUa4yIH69YwDBrYci2mT+Qo2PIitwaD/tuj1nz46A3teVVDZ6zZ67A+ntDGlvvT0JngrXkxYhiWu4bnJdsNMp3lPn5Yrk6I0dbxaYZBBgwUW+9ibvrt0ZF8GYplsK3ACgUcY6T37w7Ild6QUZ8vz7+qe8uVwlzCeqcCxa4WECbLYXrgWVuj/c+1xK4sKcbJoCvva0InWFAIPkx9GAJuQYNlauJecHbYnEryxTj4K3Y5DkpmXy+vRv2xXMb9d4wf8xQ6Zc0HJVCPIBtjJQhrZfJLoKEhrryBAlofU7vIFRQwwxfLg4ZIYUOC2aKHLtRQQMXcFrPZ1nfhIHsPxCEDRSq7YHmboudJIPNOiiyWU/elbDWDNA3abSVLS4OQAFaiaA0Om4lPwBDtXuxUf/qATVvTVJuPe9Q7Ye1MWU+TkJ2MdsZn6pmqzl371PO4xJPjCzX/dqYuEySgQWDLe3pzeHR4BM+3d1XZmDLa4DfWUFTkTOut46iufVBdpDBRi1Ybz9attarRrTtck2rQ4ZoacqxVi4GdJDijWh/T9pVBRp1MKyxvyRlV+qbp3Hj9UhmuSEnvk6uoYmeZDtW8ric9jRdVfTu/vFLjtY0j3bK+ZVOpmkx1S1uFHVfkeHw2P/h0OhQGUqs9ZyJjHA9/Js0KWRtM12CkwD/S/jfUnzg2uTNyW4XZ/aiIBfxBEUsNlcinWEDfS/ffQz0MYr7rKAjzlxo2GCyuhBaL5aChIjQUkihuEy0/5nt3cCW9SHjdZW4/+2GSI5Mz5mVJLU9ip/0vJ9qW7YDOoil6aDLpA96DTn8LAA0+oZEEmGw9PHIKCsiV5fMLsdKNXw==
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Activate an id8 code with additional details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/activateId8CodeWithDetails"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Activate an id8 code with additional details
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"id8Code":{"type":"string"},"udid":{"type":"string"},"iosDevice":{"type":"string"},"androidDevice":{"type":"string"}}}],"title":"ActivateId8CodeWithDetailsRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with activation result","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"activated":{"type":"boolean"}}}],"title":"ActivateId8CodeWithDetailsResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

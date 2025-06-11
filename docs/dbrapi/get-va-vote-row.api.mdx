@@ -1,0 +1,71 @@
+---
+id: get-va-vote-row
+title: "Get VA vote row"
+description: "Get VA vote row"
+sidebar_label: "Get VA vote row"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFlMFu2zAMhl9F4FltsmHYwbd0K4puwFqkXS9ZDorNxmptSaXodIHhdx8ouY2bFVsOCSJSJP/fH90D4VOHkc98tYeiT38tYQUFU4caSu8YHUvIhNDY0rD1bvYQvZOzWNbYmhRtmqt7KFY98D4gFOA3D1gyaAjkAxJbjLmK/Y6p1ZgXmazbwjBoYMuNHF2gQ7LlMo8Gg/5f0WCIHdJlNalrHeMWCYZhWB9KX79kvhYfpDNhDN7FXO3jfC4/FcaSbBC9UMCZifj50wm60ldYqW83Vz/Us+Va3S3UzjMq8s/wxi/G3zwLjbFHTv1bSuzKEmOcJG68b9A4GDQgkadpzBCZPWiwjG18z9SJq+dyeTkKTboHfSTyAvlIT4tc+woKCD6mYQ3XUMBsi3y3uPOMy5QWkXYok6166KiBAmrmUMxme9/RSY6eSECeRcSyI8v7lL1IPCw6KbtaT8M34lg2ZZp00J5J0iAGw0YA1uBMO4mJQkF1eYD8/Ldpg/hxQPHFLT3laD5I4XufGo4Ofj1bqsX1pbpJekCDaM7OfTidn87h2M/b2sZ0I5Df2QqjQlcFbx1Hde9JdRFJmZLtLq2VFuet22rVGLftzBZVa5zZYouOtRqnU8ZVKvho5YqqDBudjjamfERXqdK3befGTU1tuEYls082WMXOMp6qRdNMZhq3X11f3dyq8c0QM+YmIy82p26i6hH3ynRco+OxbC74uk3KEKrNO5uTHY+nvxLWwlZr0pqMz+9vEN8Y+8rAZMcGncnrR0ZX8IbRtYZaEC5W0Pcy0k9qhkGOnzokYXGtYWfImo0869V60FCjqZASpo8JlC95u09upbukN12m7ejNKG+sfGNRlhh4kjudeD3ZL7EcdMa46KH1lWSTEe3yXQBo8El/Wol01sMLKFBA7iyfP5a+BJI=
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get VA vote row"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getVAVoteRow"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get VA vote row
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"partnerId":{"type":"integer"}}}],"title":"PartnerIdRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with VA vote row","content":{"text/plain":{"schema":{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

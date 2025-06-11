@@ -1,0 +1,71 @@
+---
+id: get-public-partner-data-pp-variant
+title: "Get public partner data (PP variant)"
+description: "Get public partner data (PP variant)"
+sidebar_label: "Get public partner data (PP variant)"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNlE1v2zAMhv+KwNMGqE1WbAPmW7oVRTdgDZLulOWgyGys1pZUiU4bGP7vAyU3cYtiWw4JQlL8ePVQHQR8aDHSuSv3UHTprwlYQkGhRQnaWUJL7FLe10YrMs5O7qKzbIu6wkYlb11f30Kx6oD2HqEAt7lDTSDBB+cxkMGYs5gfmEoNcZGCsVvoewlkqGbTJVoMRi9ya9DLfyX1KpDFcFWO8hpLuMUAfd+vj6nnz5GH5D1XDhi9szFnO5tO+afEqIPxPC8UcK4ifv54gla7EkvxfXn9UzwaqsRQW5SKFLwQjPCJJr5W5pVUf58ltlpjjKPAjXM1Kgu9BAzBhbFPhaD2IMEQNvEtVUeyXvDhxTBpGryXr6a8RBK+3dRGv5hLvJvPxU4Foyy9BwkNUuVKKMC7mCZQVEEBky3SfD69PSs/qS8aJEQMO+R+Vx20oYYCKiJfTCZ714aT7D1hB19RRN0GQ/sUPUuYzFrOu1qP3UvWMUs1DjoqkgGTwLLDhrmWYFUz8vHcTPDiyP7Fk2o8q3Qk9FlDOcZr2nPiW5cKDrp+O1+I2fxKLNM8IIFnznp+OJ2eTuG1yjeViemED25nSowCbemdsRTFrQuijRiE0mR2aduk2DkyditFrey2VVsUjbJqiw1akoeLUrYU3kXDR9KtyWTaKH2PthTaNU1rhwVOZahCwb2PFlvE1hCeilldj3oaHgUxv17eiOHBiJl+lTeBZU7VeKp73AvVUoWWhrQ54WHJhAooNm8sVFY8nv5OsDNcjUrLM9zff+L5Qu0DGKN17GXGsRvIXcFLctcSKia7WEHXcaO/Qt33bH5oMTChawmp4IYJWK17CRWqEkOC9z7h8zW/BCc3XJ7D6zYz+OoZ5ectn5hpjZ5GseOW16O144sAmeEuOmhcydFBPYJM3wWABJcESIuSbB084wMF5Mr8+QNWdxOZ
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get public partner data (PP variant)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getPP0f2d5a9c"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get public partner data (PP variant)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"partnerId":{"type":"integer"}}}],"title":"PartnerIdRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with partner data","content":{"text/plain":{"schema":{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

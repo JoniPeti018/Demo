@@ -1,0 +1,71 @@
+---
+id: get-public-data-variant-from-json-file
+title: "Get public data (variant, from JSON file)"
+description: "Get public data (variant, from JSON file)"
+sidebar_label: "Get public data (variant, from JSON file)"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVNtuGjEQ/RVrnlrJBJpWlbpv5KKoqdREJHmiPBjvwDrZtR17lhSh/fdq7IVsolS98ADCcz9zzuwg4GOLkU5cuYVil/6agCUUFFqUoJ0ltMQm5X1ttCLj7Pg+OstvUVfYqGSt66sVFPMd0NYjFOCW96gJJPjgPAYyGHMW8w1Tqd4vUjB2DV0ngQzV/HSBFoPRs9wadPJPSe0MKQyTGku4xgBd1y2Geem6XdZGnylSh+wdlw4YvbMxpzueTPinxKiD8TwwFHCiIn7+NEKrXYmluLy5+i6eDFXCp5SiVKTgBWCEP2nsa2X+E6rYao0xDsZaOlejstBJwBBcGNpUCGoLEgxhE9/CdwDwOQfP+pH/At884mW/9Je+nYSIYYPh7vb0zbK/X8C+fl7BS7gvkIbIincbFYyyJMUquCbDvzI1vgcJDVLlSijAu5iaV1RBAeP1sNxH/aWc4DHs241pA22ooYCKyBfj8da1YZStIzZw6xF1Gwxtk/c0kXfacvr5Ymi+4e1msIZOz9vJtJfAZIAlq02CVc3AxhiwrmbPijz/qRrPyD3rZg+sPJB+0nHWlUvVeqDPTmZiev1V3KRhQAIPnIH9cDQ5msBruG8rE1OED25jSowCbemdsRTFygXRRgxCaTKbdACk2Dgydi1Frey6VWsUjbJqjQ3yirwKZDnAlsK7aDgkrVGmp6XSD2hLoV3TtLa/KakMVSi498GtEbE1hEdiWteDnvo7Ja6vbm5Ff8Ni1qPK5GCMUzWe6gG3QrVUoaU+bU54kL1QAcXyDYlnuOPRj6Q6Jlijkgr65f0LT19AfqDG4Ex0MhNy11N4Dm9SeCGhYqYXc9jtuOm7UHcdPz+2yJSYLySkPpbMhvmik1ChKjEkFj8kHp3mQzW65S7YvW4zGV9deb4OOWKqNXoa+A47XwxkyEsBmVle7KBxJXsH9QQyfRcAElzCISkmve1gTyUoIFfmzy/4iUq0
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get public data (variant, from JSON file)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getPublicData3c9d0e2"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get public data (variant, from JSON file)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"nRetry":{"type":"integer"}}}],"title":"GetPublicDataRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with public data","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"publicJson":{"type":"object"},"serverUTC":{"type":"string"}}}],"title":"GetPublicDataResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

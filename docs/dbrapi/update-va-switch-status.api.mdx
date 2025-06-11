@@ -1,0 +1,71 @@
+---
+id: update-va-switch-status
+title: "Update VA switch status"
+description: "Update VA switch status"
+sidebar_label: "Update VA switch status"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVU1vEzEQ/SvWnN0mIITQ3lJACJAoSgqXkIOzO82a7trGHqdEq/3vaOxN41ZBfOTQqDPj+Xhv3mQAjz8iBrqyzQGqIf2rPTZQkY8oobaG0BC7lHOdrhVpa2bfgzVsC3WLvUrerru+hWo9AB0cQgV2+x1rAgnOW4eeNIacRX/EVGqKC+S12cE4SiBNHZveoUGv62VuDUb5p6S6efXaNngmqwSnPBn075vCqw3hDj27AymK4bxPOXc2pVki+cO5N+O4OY3xxTWK8Otida+pbh+mGXlUj8FZE3L7z+dz/mow1F47BhgquFIBX764QFPbBhvxYXX9SdxrakVMaYXHEDuGoqCI8CfNXKf0f5ITYl1jKNHYWtuhMjw1em996VPeqwNI0IR9OMdoQelbfrychv4bRs2tLVJOUccusvUf4T/WzgQ8BjvHiq8LEVK0mNZCQo/U2gYqcDakNhW1UMEsPsoOEgL6PTI+6wGi76CClshVs9nBRn+RvRfs4B4D1tFrOqToRZLEInLi9aZ0r5jBDEgZdGIgi0kCEw5b1rAEo/rCx7OyWpcnnb/9qXrXYanGI2fyJKWTqVDQ/CSY+aSPU9xRFvNRnvibyHhztRSLz+/FKuEAEhirjP2zy/nlHJ4yctPqkF44b/e6wSDQNM5qQ0HcWi9iQC9UTXqfLpIUe0va7KTolNlFtUPRK6N22KMhKaYRhDKNcDZofiIaRUom01bVd2gaUdu+j2Y6cqkMtSi49+L4iRA14aVYdF3R03Q4xefr1Y2YjmrIglVZvExPqsZT3eFBqEgtGprS5oQPd0Eoj2J75gZkuMPltyRK3speJblPvP9+lR8B/LBDxc0YZd7cYdryNTzZ8o2ElmVQrWEYuLkvvhtHNv+IyNSvNxL2ymu1ZdbXm1FCi6pBnxb9Lq3a63yvLm64Pod3Me/rk58XPhL5xaKu0VERW/a8KTTK4IPMQqgG6PMie3UPMv2tACTYhEASVbINcFwZqCBX5s8vBeF1kg==
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update VA switch status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/updateVASwitch"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update VA switch status
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"id8Code":{"type":"string"},"partnerId":{"type":"integer"},"status":{"type":"integer"},"app":{"type":"string"},"nRetry":{"type":"integer"}}}],"title":"UpdateVASwitchRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with update result","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"info":{"type":"object"},"errortype":{"type":"integer"}}}],"title":"UpdateVASwitchResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

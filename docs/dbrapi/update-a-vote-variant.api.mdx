@@ -1,0 +1,71 @@
+---
+id: update-a-vote-variant
+title: "Update a vote (variant)"
+description: "Update a vote (variant)"
+sidebar_label: "Update a vote (variant)"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVU1vEzEQ/SvWnEBym1AQoL2lUKGCRFHacgk5OLvTrNtd27XHgWi1/x2NvWm2JYiPHBrVMx6/efPepAOP9xEDndpqC0WX/tUeKyjIR5RQWkNoiEPKuUaXirQ1k9tgDZ+FssZWpWjTXNxAseiAtg6hALu6xZJAgvPWoSeNIVfRnzA9NeQF8tqsoe8lkKaGjz6gQa/LeYYGvfxT0Y0lHJXUhnCNHnoJTnky6M+rw2Hl3AEoEswcyW8P3en75R7otasU4VdL+IC150Y8BmdNyOBOplP+qjCUXjumDwo4VQFfvzpCU9oKK/Hx8uKz+K6pFjGVFB5DbLjR0QAIf9DENUr/J/UhliWGMOpqZW2DynDH6L3145jyXm1BgiZsw6F5jQZ2xpfnQ9N/MS9tbuyo5JC1Q5FP/4H63buZ/MdE5zyhBGtEPNsor5Wh5yChRaptBQU4GxJERTUUMIkPld+uTvBN+RIkBPQbZHoWHUTfQAE1kSsmk62N/ihHjzjAEAOW0WvapuxZ0vsscu3Fchy+5AFmPsZJ+wFkp0jgecOKDSrBqHYU43bZivO9ic9+qNY1OLbabmRy8Mn0kS2mgwv2WTvxT3u5n9RA+/vTuZh9OReXqWUuiT5kpl8cT4+n8JT/q1qHdMN5u9EVBoGmclYbCuLGehEDeqFK0pu0WSTPSZu1FI0y66jWKFpl1BpbNCTFgFsoUwlng+YrolKkZDpaqfIOTSVK27bRDMsqPUM1CsY+WmIiRE14LGZNM8I0LEDx5eLySgzLMWRrqmxTnkR6jbu6w61QkWo0NJTNBR82gFAexeqA2zPd4fhbsh9rsFXJ2MOIfy/cRwQ/yGW0HXqZRdoNml7Ar5peSqhZ98UCuo7xXfum7/n4PiJPf7GUkB5d8eAXy15CjapCn2R9l4T1Li+noyuGwOlNzOp88kvBGyHfmJUlOhrljmEvR6Zk/kFm2RcdtLbibK++g0x/CwAJNpGQLJTOOtipBgrIL/PnJyXBYgQ=
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a vote (variant)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/updateVote8b2e7c3"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update a vote (variant)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"vote":{"type":"integer"},"partnerId":{"type":"integer"},"app":{"type":"string"},"nRetry":{"type":"integer"}}}],"title":"UpdateVoteRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with update result","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"info":{"type":"object"},"errortype":{"type":"integer"}}}],"title":"UpdateVoteResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

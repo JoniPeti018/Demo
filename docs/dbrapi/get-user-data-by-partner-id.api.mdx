@@ -1,0 +1,71 @@
+---
+id: get-user-data-by-partner-id
+title: "Get user data by partner id"
+description: "Get user data by partner id"
+sidebar_label: "Get user data by partner id"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1PGzEQ/SvWnJ2PIkSrvSUtQrRSQYGe0hyc9ZA17NqLPRuIVvvfq7E3yUJpqZpDoni+37w3LXh8bDDQ3OkdZG38azxqyMg3KCF3ltASm1RdlyZXZJyd3Adn+S3kBVYqWsvy6g6yZQu0qxEycOt7zAkk1N7V6MlgSFnMN4yler9A3tgNdJ0EMlTy0wVa9CZfpNagk+8lrZUni/5SD/IaS7hBD13XrYap6UdAP99d70MOVTpuwWOonQ0p7cl0yj8aQ+5NzYNDBnMV8Ox0hDZ3GrX4enP1XTwZKkQT0AutSMEL2AifaVKXyvwnYKHJcwxhMNnauRKVhU4Ceu/80Ka8VzuQYAir8BbKA5jPOXjRD/wPKPOAg5S91/v47gskhF+ieYF0BE6sd6JfpTAaJFRIhdOQQe1C7EdRARlMNr9V+ag/nZ2oU5AQ0G+RMVm20PgSMiiI6mwy2bnGj5J1xAZuO2DeeEO76D2L1Jw1XGO5GppveGsJhKHTEfVEagm8ZFizliRYVQ1sPDqrZnHU2/mzqmpG7aiK/Z7kkNLTjhPfuViwx/nLfCFm15fiJs4DEnjmBOmH8XQ8hddA3xYmxIjau63RGARaXTtjKYg759MSVE5mGxUuxdaRsRspSmU3jdqgqJRVG6zQkjxsSVktahcMh8QVyvi0VvkDWi1yV1WN7Y9GLEMFCu59cExEaAzhWMzKctBTf4jE9dXNreiPVEhCU0l0DHOsxlM94E6ohgq01KdNCQ96FsqjWL+h3YR4GP+MgmKiVSpKtd/f3xn6AuQDHwaa72RiYduTdwl/Ju9KQsFEz5bQttzrD192HT8/NuiZpCsJW+WNWjMJlqtOQoFKsyyXLTxEBn1Op2d0y62we9kkGr663qz3FDHLc6xp4DtsfzVQIe8CZOJ31kLlNHt79QQyfmcAElwEI2olvrWwZxBkkCrz5xeIYz8A
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get user data by partner id"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getUserByPartnerId7d862a4"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get user data by partner id
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"partnerId":{"type":"integer"}}}],"title":"GetUserByPartnerIdRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with user data","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"user":{"type":"object"}}}],"title":"GetUserByPartnerIdResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

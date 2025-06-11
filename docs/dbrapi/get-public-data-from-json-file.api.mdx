@@ -1,0 +1,71 @@
+---
+id: get-public-data-from-json-file
+title: "Get public data from JSON file"
+description: "Get public data from JSON file"
+sidebar_label: "Get public data from JSON file"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMlu2zAQ/RVizvTSouhBN2dB0BRoAts5uT7Q0thiIpEMOXJiCPr3YkjZkYMUKeqDDXP2N+9NCx6fGwx0YYsDZG38qz0WkJFvUEJuDaEhNinnKp0r0tZMHoM1/BbyEmsVrVV1t4Vs1QIdHEIGdvOIOYEE561DTxpDyqJ/YizV+wXy2uyg6ySQpoqfbtCg1/k8tQad/CypmSP5YVJtCHfooeu69TAv3TebSudXitQpe8elPQZnTUjpvk6n/FNgyL12PDBkcKECfv82QpPbAgtxu7j7JV40lcLFlKJQpOAMMMJXmrhK6f+EKjR5jiEMxtpYW6Ey0ElA760f2pT36gASNGEdPsJ3APA1B8/7kf8B3zTibb/0c99OQkC/R/+wvPyw7N8XcKyfVnAO9w3SEFmx9bZOoG91hSChRiptARk4G2LHikrIYLIb1oBjcyHi3fgKMiiJXDaZHGzjR8k6YgM3GjBvvKZD9J5Fqs4azrtaD80L3mWCZuj0totEcgm8etiwtiQYVQ9sPDGraP6mv+tXVTvG6U0lRxjlieLTjrNubazWw3p1MRez+x9iEYcBCTxwgvHLeDqewntwl6UOMcJ5u9cFBoGmcFYbCmJrvWgCeqFy0vsodyn2lrTZSVEps2vUDkWtjNphjYakcMqT4QBTCGeD5pC4NBmfNip/QlOI3NZ1Y/oLEstQiYJ7H1wWERpNOBazqhr01F8lcX+3WIr+YoWkPpVIwRjHajzVEx6EaqhEQ33alPAkcqE8is0Hgk5wh/HvqDFmVq0i5/vlfcrKM5xPfBhcgk4mFrY9YVdwTti1hJIJna2gbbnFB191HT8/N8gEWK0l7JXXasO7X607CSWqAn3k7FNkzWU6QqMll2f3qknUe3fBWfkpYpbn6GjgO2x5PVAbrwBk4nTWQm0L9vbqBWT8zgAk2AhA1Ed8a+FIHMggVebPH/7bP5w=
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get public data from JSON file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getPublicData"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get public data from JSON file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"nRetry":{"type":"integer"}}}],"title":"GetPublicDataRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with public data","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"publicJson":{"type":"object"},"serverUTC":{"type":"string"}}}],"title":"GetPublicDataResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

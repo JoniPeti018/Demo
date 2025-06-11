@@ -1,0 +1,71 @@
+---
+id: store-app-language-records
+title: "Store app language records"
+description: "Store app language records"
+sidebar_label: "Store app language records"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVE1v2zAM/SsCz8rHhmEH39KtGPaBtUi6U5aDYrOxWltSJSpdYPi/D5TcxM2CLpckIkXxPb7HDjw+RQx0ZasDFF36qz1WUJCPKKG0htAQh5RzjS4VaWtmD8EaPgtlja1K0aa5uYdi3QEdHEIBdvuAJYEE561DTxpDrqK/Y3pqyAvktdlB30sgTQ0ffUGDXpfL3Br08n9FBxD/VpWAJrZQrGGrysfoSG0bBAkVNkionAPJuNBU/HvTp39GtXihQQmNMrtwqfV+c2p+RdbjwrkfnHyE0DM+j8FZE3LP7+dz/qowlF47ZhUKuFIBP36YoClthZX4trr5KZ411YLRJuqFxxAbpmA0GsI/NHON0mdDeZu1EMsSwxjQ1toGlWGs6L3145jyXh1AgiZsL5Nw4uCaLy8HtAl8L8+QJpqEck4wq1HtUHgsra8CSGiRaltBAc6G1LeiGgqYhTG3ICGg3yN3ue4g+gYKqIlcMZsdbPSTHJ1wgAcUsIxe0yFlL5IMF5Hrrjfj8IrZywSNk048ZAFLYLJhy76RkCXzEmO07JDlyVvXf1TrGhw74KTRo3zPVHrU4il1kOBIlNrc29TewP3nq6VY3H4Vq4QeJDBDmfN30/l0DueTuKt1SDect3tdYRBoKme1oSDurRcxoBeqJL1PApRib0mbnTwNrlVG7bBFQ1I45cnwBVMJZ4NOmq0UKZmOGCCaSpS2baMZ1kl6hmoU3PtozYgQNeFULJpm1NOwosTtzepODNSF7BKVHcNDSa8xqkc8CBWpRkND2VzwaEahPIrtBeNljsP0dzIES7FVyWDDUN6U8CuOj+IZGbWXWbLdoO41vFb3RkLN6i/W0HXc3i/f9D0fP0X0rOKNhL3yOomFRSyhRlWhTwJ/TBL7lHfE5I6f5/QmZp2erXJesfnGoizR0Sh33PJmZE2mH2Q2QNFBayvO9uqZBa2eoQCQYBMBeUfzWQcvVEEB+WX+/AWPt0T8
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Store app language records"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/storeAppLangs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Store app language records
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"request":{"type":"string","enum":["backuptable","deleteapp","appendapp"]},"appname":{"type":"string"},"langs":{"type":"string"}}}],"title":"StoreAppLangsRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with operation result","content":{"text/plain":{"schema":{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

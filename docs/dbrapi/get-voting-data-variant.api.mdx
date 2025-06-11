@@ -1,0 +1,71 @@
+---
+id: get-voting-data-variant
+title: "Get voting data (variant)"
+description: "Get voting data (variant)"
+sidebar_label: "Get voting data (variant)"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1PGzEQ/SvWnFrJISlCVNpbaBGilQpKaC9pDo53yBp27cWeDUSr/e/V2AsYhFrUHBJlZjwfb96bHjzedRjoxJV7KPr413gsoSDfoQTtLKEldqm2rY1WZJyd3gRn2RZ0hY2K3rq+uIZi1QPtW4QC3OYGNYGE1rsWPRkMKYv5jrHUGBfIG7uFYZBAhmo2naFFb/QitQaD/FfSVnmy6M/LLK+xhFv0MEiwCyS/f8s3DOu8LP1yhE9lB+7JY2idDanO4WzGPyUG7U3LSEABJyrg8dEErXYlluLb8uKHuDdUiZ0jFKUiBS9wJHygaVsr858Ihk5rDCEbZ+NcjcryqOi987lPea/2IMEQNuEt2DPcT/nxYhz4HbDzgO9H9TFtwvUlhmdIDJex2wiY+LBT3ihLH0FCg1S5EgpoXYg9KKqggOk2JT4sj8sj/RkkBPQ75OFXPXS+hgIqoraYTveu85PknbCD2wuoO29oH6PnkZTzjhOv1rl7yetJ0+ZBz/AmOkvgbcKGVSTBqibz8bSsl8Wz0k4fVNPWmOvhcSEyJ/PsmbuzgWtcu1h7hPbryULML8/FMo4GEnj8BOing9nBDF7DfFWZEF+03u1MiUGgLVtnLAVx7bzoAnqhNJldlLkcdyJFrey2U1sUjbJqiw1akmJsVChbitYFw0/i+mQ0bZS+RVsK7Zqms+PliGWoQsG9ZxdFhM4QHoh5XWc9jddIXF4sr8R4qUISl0pCY8RjNZ7qFvdCdVShpTFtSvikYaE8is0bek3gh4PfUURMtEZFeY6r/Bs/X0D8RIxM5YNMdOxH6q7gFXXXEirmdrGCvuf2fvp6GNh81yEvf7WWECtueO+r9SChQlWij+y9jfz5ki7M5Irrc3jdJRK+utos6/RirjW2lMXmPa8z4TH8IBO7ix4aV3K0V/cg43cBIMFFBKJSoq2HR9JAAakyf/4A9Ss6Jw==
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get voting data (variant)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getVote2d6d4c7"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get voting data (variant)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"partnerId":{"type":"integer"},"nRetry":{"type":"integer"}}}],"title":"GetVoteRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with vote data","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"vote":{"type":"integer"}}}],"title":"GetVoteResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

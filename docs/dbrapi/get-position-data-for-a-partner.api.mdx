@@ -1,0 +1,71 @@
+---
+id: get-position-data-for-a-partner
+title: "Get position data for a partner"
+description: "Get position data for a partner"
+sidebar_label: "Get position data for a partner"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVU1v2zAM/SsCz2qSDcMw+JZ2RdENWIu0O2U5KBYbq7UlV6KzBob/+0DJaZQiQLflkA+S5sd7j0wPHp87DHTu9A6KPv40HjUU5DuUUDpLaIldqm1rUyoyzk4fg7NsC2WFjYreur55gGLZA+1ahALc+hFLAgmtdy16MhhSFvMdY6kxLpA3dgPDIIEM1Wy6QovelIvUGgzyvaRGf7lwGk9kldAqTxb9tc68xhJu0LPbLpD87pRvGFZ5S3TrguHhX9sauGePoXU2pD4+zmb8oTGU3rQcDAWcq4CfP52hLZ1GLb7d3fwQvw1Voh0TCq1IwRHWhC80bWtl/hPl0JUlhpCNtXauRmV5ZPTe+dynvFc7kGAIm3CKmoybS354MQ79F9TshzyNPjlS9WlX693LKZ1IMPbBZY6x8H6wZP0XOvezJEKPybtCOuZJPDgvlBhVBRIapMppKHjSOL6iCgqYbg4lQEJAv0UGfdlD52sooCJqi+l05zp/lrxn7OAuA5adN7SL0fO4MPOOsy5XufuOZZFQzoMOtKZVY8CiADR/t6rJfDww7/LicAUuX1TT1pjv6h57eVi0gynbr9lhnWY5TyPoX88XYn57Le7itCCBEUkwf5jMJjN4C/59ZUJ8ovVuazQGgVa3zlgKkYYuoBeqJLONV0mKrSNjN1LUym46tUHRKKs22KAluadMKKuPKZXRtFblE1otStc0nR0PXSxDFQruPTuAInSGcCLmdZ31NB5PcXtzdy/GwxrSrqu090xCrMZTPeFOqI4qtDSmTQlfT4pQHsX6xPlI4IfJr7jPLLxGxQ0b2X1ftUdAvyomOzuDTDrtR0EvIRf0SkLFci+W0Pfc4U9fDwObnztk/pcrCVvljVoz9cvVIKFCpdFHTT9FVV2ke3d2z8U5vO6SNN/8z/CRSU/MyxJbymLzhlfZLjIDIJPmix6apFmvfoOM7wWABBfHj/sTbT3sdQMFpMr8+gPGE3ov
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get position data for a partner"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getPosition"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get position data for a partner
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"id8Code":{"type":"string"},"partnerId":{"type":"integer"},"nRetry":{"type":"integer"}}}],"title":"GetPositionRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with position data","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"position":{"type":"integer"},"total":{"type":"integer"},"proxy":{"type":"string"},"info":{"type":"object"},"errortype":{"type":"integer"}}}],"title":"GetPositionResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: activate-an-id-8-code
+title: "Activate an id8 code"
+description: "Activate an id8 code"
+sidebar_label: "Activate an id8 code"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsCz0rSDcNQ+JZ2xdANWIukO2U5KBYbq7UlV6LSBYb/+0DJadwi+8BySBCS4sfje+zA41PEQBdO76Ho0l/jUUNBPqKE0llCS+xSbVubUpFxdvYQnGVbKCtsVPLW9c09FKsOaN8iFOA2D1gSSGi9a9GTwZCzmK+YSg1xgbyxW+h7CWSoZtNntOhNucitQS//ltTo80un8URWCVEbfapcvz4WnJdkdorwOud5KdxzVx5D62zIld6fnfGPxlB60zIWUMCFCvjxwwRt6TRq8WV58008G6qEynmNs8JjiDV3PkKU8CfN2lqZ/8QyxLLEEEbTbZyrUVmeG713fuxT3qs9SDCETTiJyBGQK368GAb/hwUMg6I+1cufoT7UyGC/BvYQLJQVRp8LxhckNEiV01BA60LqRVEFBczU69wgIaDfIaOw6iD6GgqoiNpiNtu76CfZO2EHtxiwjN7QPkXPE0/nkTOv1mP3kveUxx4HHXHODJfAa4UNC0uCVc3Ix5OyhBZH8V39VE1b41gih83II7+PpkzrEc+NvXepiwHoTxcLMb+9Fss0JEhgIDKs76Zn0zN4C/ZdZUJ60Xq3MxqDQKtbZywFce+8iAH9iNFS7BwZu5WiVnYb1RZFo6zaYoOWpGiVJ8sPrBatCyaJQCtSMpk2qnxEq0Xpmiba4aykMlSh4N5H50aEaAinYl7Xo56GUyVub5Z3YjhjYdBd1iBjn6rxVI+4FypShZaGtDnhi7yF8ig2J6ScMQ7TH0lXzLlGJcUOS/0NS1+h+8KOkeb5ODEnu4HAK3hL4LWEiilerKDruLXvvu57Nj9F9EzUtYSd8kZteOerdS+hQqXRJw4/JhZd5oMzueMGOLyOmYpvzjmrPL+YlyW2NIodN70e6Y+hB5k5XnTQZI569QwyfRcAElyCIOkl2To4EAYKyJX58ws1VEOF
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Activate an id8 code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/activateId8Code"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Activate an id8 code
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"id8Code":{"type":"string"},"udid":{"type":"string"}}}],"title":"ActivateId8CodeRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with activation result","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"activated":{"type":"boolean"}}}],"title":"ActivateId8CodeResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

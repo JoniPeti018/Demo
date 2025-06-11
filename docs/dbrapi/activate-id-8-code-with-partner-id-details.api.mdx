@@ -1,0 +1,71 @@
+---
+id: activate-id-8-code-with-partner-id-details
+title: "Activate id8 code with partner id details"
+description: "Activate id8 code with partner id details"
+sidebar_label: "Activate id8 code with partner id details"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVU1vGzkM/SsCz0qcLrqL7NycplhkCzRBkj25PtAS41EzI00ljlvD8H9fUBp7JoHRLx9ihJRE8j2+5x1E+tJT4qtgt1Dt8r8ukoWKY08aTPBMniWFXdc4g+yCn31OwUssmZpazNmmuX2CarED3nYEFYTVZzIMGroYOorsKJVX3AfKpYZziaPza9jvNbDjRkL/kKfozH1pDfb6R486e/kuWDrxqobeOnsy4UK6po0zp6+htzE4+50T1KJrTg2yX46jzA27DTLdlA7vMLKneGOvidE16TjiXuaPlLrgU5npj4sL+bKUTHSdoA4VXGGiv96ekTfBklX/Ptx+VF8d1wpLHRe8Qm9VV+oo558CvGCR6RvPugbdb/KXemMopcncqxAaQp8hiTHEaQ5jxC1ocExtOonVCNV7uXw/QPATpA8jkz3dS3eAepJ2nmlNUdKJzKuVOSZ/jcBDv4XCl3QdLitnL5VQVsg6smOVLc+Ahpa4DhYq6ELKwyLXUMEMXzYw1P2T/rZv8RJkkLghAX2xgz42UEHN3FWz2Tb08axkzyQhUyUyfXS8zafnWYrzXuosltP0g6xFQXl6aKS1iFiDbBGsxDs0eGwnOQFDXOJ+9Jf337DtGpq6wGER9CjhMVSUOzkyCnYMvtLpmBjkORW8iEGGGKi9vrpX87sb9ZAxAg2CYyHuzfnF+QW8pvOxdinf6GLYOEtJkbddcJ6TegpR9YniRIlabQI7v9aqQb/ucU2qRY9rasmzPm5B1mtILovXIqPOoRWaZ/JWmdC2vR+MN5fhmpT0PjFklXrHdK7mTTPpaTBzdXf78KgGo0+DXxTvEOpyNZnqmbYKe67J8/BsefBoSwojqdUJCyoYp/NPRXkhcYvZX4ad+BUdvID8uHET2xJPj9l4i0QW8H2JLDXUIqlqAbuddP9fbPZ7CX/pKYoUlho2GB2uZC0Wy72GmtBSzCp5znv6rjjo2aO0I8ebviz7q99Esa1yY24MdTw5Ox1hOdG7sAO6qKjaQVtUEPEr6Py3AtAQMiBZkTm2g8NOQQWlsnz+B3GwtiA=
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Activate id8 code with partner id details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/activateId8CodeDetails5e9d4a8"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Activate id8 code with partner id details
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"id8Code":{"type":"string"},"udid":{"type":"string"},"iosDevice":{"type":"string"},"androidDevice":{"type":"string"},"email":{"type":"string"}}}],"title":"ActivateId8CodePartnerIdDetailsRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with activation and partner info","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"activated":{"type":"boolean"},"partnerId":{"type":"integer"},"secCode":{"type":"integer"}}}],"title":"ActivateId8CodePartnerIdDetailsResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

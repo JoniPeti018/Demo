@@ -1,0 +1,1006 @@
+openapi: 3.0.0
+info:
+  title: DBR API Server
+  version: 1.0.0
+  description: |
+    This API provides endpoints for user activation, voting, language management, partner and position data, and backend communication for the DBR application suite. All endpoints require POST requests with a JSON body and API key authentication. All responses are base64-encoded JSON strings.
+
+servers:
+  - url: http://your-server-url
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: body
+      name: apiKey
+
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        errors:
+          type: array
+          items:
+            type: string
+
+    Lang:
+      type: object
+      properties:
+        id:
+          type: integer
+        app:
+          type: string
+        page:
+          type: string
+        lang:
+          type: string
+        keyword:
+          type: string
+        text:
+          type: string
+
+    RateRow:
+      type: object
+      properties:
+        id:
+          type: integer
+        time:
+          type: string
+        votes:
+          type: integer
+        v1:
+          type: integer
+        v2:
+          type: integer
+        v3:
+          type: integer
+        v4:
+          type: integer
+        r1:
+          type: number
+        r2:
+          type: number
+        r3:
+          type: number
+        r4:
+          type: number
+        updated_at:
+          type: string
+
+    PartnerRow:
+      type: object
+      properties:
+        partners_id:
+          type: integer
+        va_status_flag:
+          type: integer
+
+    # Generic request/response schemas for endpoints
+    GenericRequest:
+      type: object
+      properties:
+        apiKey:
+          type: string
+
+    Id8CodeRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
+
+    PartnerIdRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            partnerId:
+              type: integer
+
+    NRetryRequest:
+      type: object
+      properties:
+        nRetry:
+          type: integer
+          description: Optional, 0/1/2
+
+    # Example: /getAllLast2Rows
+    GetAllLast2RowsRequest:
+      allOf:
+        - $ref: '#/components/schemas/Id8CodeRequest'
+
+    GetAllLast2RowsResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            allLast2RowsRates:
+              type: array
+              items:
+                $ref: '#/components/schemas/RateRow'
+            sqlTimeUTC:
+              type: string
+
+    # Example: /getLangsAll
+    GetLangsAllResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            langList:
+              type: array
+              items:
+                $ref: '#/components/schemas/Lang'
+
+    # Example: /getLangsByAppPageLang
+    GetLangsByAppPageLangRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            app:
+              type: string
+            page:
+              type: string
+            lang:
+              type: string
+            nRetry:
+              type: integer
+
+    GetLangsByAppPageLangResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            langList:
+              type: array
+              items:
+                $ref: '#/components/schemas/Lang'
+
+    # Example: /storeLangs
+    StoreLangsRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            request:
+              type: string
+              enum: [backup, replace]
+            langs:
+              type: string
+
+    StoreLangsResponse:
+      $ref: '#/components/schemas/ErrorResponse'
+
+    # Example: /getApps
+    GetAppsResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            appList:
+              type: array
+              items:
+                type: object
+                properties:
+                  app:
+                    type: string
+
+    # Example: /storeAppLangs
+    StoreAppLangsRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            request:
+              type: string
+              enum: [backuptable, deleteapp, appendapp]
+            appname:
+              type: string
+            langs:
+              type: string
+
+    StoreAppLangsResponse:
+      $ref: '#/components/schemas/ErrorResponse'
+
+    # Example: /activateId8Code
+    ActivateId8CodeRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
+            udid:
+              type: string
+
+    ActivateId8CodeResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            activated:
+              type: boolean
+
+    # Example: /activateId8CodeWithDetails
+    ActivateId8CodeWithDetailsRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
+            udid:
+              type: string
+            iosDevice:
+              type: string
+            androidDevice:
+              type: string
+
+    ActivateId8CodeWithDetailsResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            activated:
+              type: boolean
+
+    # Example: /activateId8CodeDetails5b9e3c2
+    ActivateId8CodeDetailsRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
+            udid:
+              type: string
+            iosDevice:
+              type: string
+            androidDevice:
+              type: string
+
+    ActivateId8CodeDetailsResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            activated:
+              type: boolean
+            secCode:
+              type: integer
+
+    # Example: /activateId8CodePartnerIdDetails
+    ActivateId8CodePartnerIdDetailsRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
+            udid:
+              type: string
+            iosDevice:
+              type: string
+            androidDevice:
+              type: string
+            email:
+              type: string
+
+    ActivateId8CodePartnerIdDetailsResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            activated:
+              type: boolean
+            partnerId:
+              type: integer
+            secCode:
+              type: integer
+
+    # Example: /getPartnerId4Id8Code
+    GetPartnerId4Id8CodeRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
+            nRetry:
+              type: integer
+
+    GetPartnerId4Id8CodeResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            partnerId:
+              type: integer
+
+    # Example: /getVote
+    GetVoteRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            partnerId:
+              type: integer
+            nRetry:
+              type: integer
+
+    GetVoteResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            vote:
+              type: integer
+
+    # Example: /updateVote
+    UpdateVoteRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            vote:
+              type: integer
+            partnerId:
+              type: integer
+            app:
+              type: string
+            nRetry:
+              type: integer
+
+    UpdateVoteResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            info:
+              type: object
+            errortype:
+              type: integer
+
+    # Example: /getVASwitch
+    GetVASwitchRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
+            partnerId:
+              type: integer
+            nRetry:
+              type: integer
+
+    GetVASwitchResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            partnerRow:
+              $ref: '#/components/schemas/PartnerRow'
+
+    # Example: /updateVASwitch
+    UpdateVASwitchRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
+            partnerId:
+              type: integer
+            status:
+              type: integer
+            app:
+              type: string
+            nRetry:
+              type: integer
+
+    UpdateVASwitchResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            info:
+              type: object
+            errortype:
+              type: integer
+
+    # Example: /updateVASwitch7a9f1c5
+    UpdateVASwitchVPHRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
+            partnerId:
+              type: integer
+            status:
+              type: integer
+            vph:
+              type: integer
+            app:
+              type: string
+            nRetry:
+              type: integer
+
+    UpdateVASwitchVPHResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            info:
+              type: object
+            errortype:
+              type: integer
+
+    # Example: /getPosition
+    GetPositionRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
+            partnerId:
+              type: integer
+            nRetry:
+              type: integer
+
+    GetPositionResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            position:
+              type: integer
+            total:
+              type: integer
+            proxy:
+              type: string
+            info:
+              type: object
+            errortype:
+              type: integer
+
+    # Example: /getPublicData
+    GetPublicDataRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            nRetry:
+              type: integer
+
+    GetPublicDataResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            publicJson:
+              type: object
+            serverUTC:
+              type: string
+
+    # Example: /getUserByPartnerId7d862a4
+    GetUserByPartnerIdRequest:
+      allOf:
+        - $ref: '#/components/schemas/GenericRequest'
+        - type: object
+          properties:
+            partnerId:
+              type: integer
+
+    GetUserByPartnerIdResponse:
+      allOf:
+        - $ref: '#/components/schemas/ErrorResponse'
+        - type: object
+          properties:
+            user:
+              type: object
+
+security:
+  - ApiKeyAuth: []
+
+paths:
+  /getAllLast2Rows:
+    post:
+      summary: Get the last 2 rows of rates data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetAllLast2RowsRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with rates data
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetAllLast2RowsResponse'
+
+  /getPP0f2d5a9c:
+    post:
+      summary: Get public partner data (PP variant)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PartnerIdRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with partner data
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /getP1a3e6b0d:
+    post:
+      summary: Get public partner data (P variant)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PartnerIdRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with partner data
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /getTestDbrIndex:
+    post:
+      summary: Get the latest DBR test index
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Id8CodeRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with test index
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /activateId8Code:
+    post:
+      summary: Activate an id8 code
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActivateId8CodeRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with activation result
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ActivateId8CodeResponse'
+
+  /activateId8CodeWithDetails:
+    post:
+      summary: Activate an id8 code with additional details
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActivateId8CodeWithDetailsRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with activation result
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ActivateId8CodeWithDetailsResponse'
+
+  /activateId8CodeDetails5b9e3c2:
+    post:
+      summary: Activate id8 code with details (variant)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActivateId8CodeDetailsRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with activation result
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ActivateId8CodeDetailsResponse'
+
+  /activateId8CodeDetails5e9d4a8:
+    post:
+      summary: Activate id8 code with partner id details
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActivateId8CodePartnerIdDetailsRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with activation and partner info
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ActivateId8CodePartnerIdDetailsResponse'
+
+  /getPartnerId4Id8Code:
+    post:
+      summary: Get partner id for a given id8 code
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetPartnerId4Id8CodeRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with partner id
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetPartnerId4Id8CodeResponse'
+
+  /getVote:
+    post:
+      summary: Get voting data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetVoteRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with vote data
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetVoteResponse'
+
+  /getVote2d6d4c7:
+    post:
+      summary: Get voting data (variant)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetVoteRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with vote data
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetVoteResponse'
+
+  /updateVote:
+    post:
+      summary: Update a vote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateVoteRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with update result
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/UpdateVoteResponse'
+
+  /updateVote8b2e7c3:
+    post:
+      summary: Update a vote (variant)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateVoteRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with update result
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/UpdateVoteResponse'
+
+  /updateVote2f1d7a6:
+    post:
+      summary: Update vote with UTC timestamp
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateVoteRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with update result
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/UpdateVoteResponse'
+
+  /getVASwitch:
+    post:
+      summary: Get VA switch status for a partner
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetVASwitchRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with VA switch status
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetVASwitchResponse'
+
+  /getVASwitch0e8b4a1:
+    post:
+      summary: Get VA switch status (variant)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetVASwitchRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with VA switch status
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetVASwitchResponse'
+
+  /updateVASwitch:
+    post:
+      summary: Update VA switch status
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateVASwitchRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with update result
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/UpdateVASwitchResponse'
+
+  /updateVASwitch7a9f1c5:
+    post:
+      summary: Update VA switch status with VPH
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateVASwitchVPHRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with update result
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/UpdateVASwitchVPHResponse'
+
+  /getVAVoteRow:
+    post:
+      summary: Get VA vote row
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PartnerIdRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with VA vote row
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /getLangsAll:
+    post:
+      summary: Get all language records
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with language records
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetLangsAllResponse'
+
+  /storeLangs:
+    post:
+      summary: Store language records
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreLangsRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with operation result
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/StoreLangsResponse'
+
+  /getLangsByAppPageLang:
+    post:
+      summary: Get language records by app, page, and lang
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetLangsByAppPageLangRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with language records
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetLangsByAppPageLangResponse'
+
+  /getApps:
+    post:
+      summary: Get all available apps
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with app list
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetAppsResponse'
+
+  /storeAppLangs:
+    post:
+      summary: Store app language records
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreAppLangsRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with operation result
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/StoreAppLangsResponse'
+
+  /getPosition:
+    post:
+      summary: Get position data for a partner
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetPositionRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with position data
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetPositionResponse'
+
+  /getPosition7d7a8f0:
+    post:
+      summary: Get position data (variant)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetPositionRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with position data
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetPositionResponse'
+
+  /getPublicData:
+    post:
+      summary: Get public data from JSON file
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetPublicDataRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with public data
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetPublicDataResponse'
+
+  /getPublicData3c9d0e2:
+    post:
+      summary: Get public data (variant, from JSON file)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetPublicDataRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with public data
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetPublicDataResponse'
+
+  /getUserByPartnerId7d862a4:
+    post:
+      summary: Get user data by partner id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetUserByPartnerIdRequest'
+      responses:
+        '200':
+          description: Base64-encoded JSON with user data
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetUserByPartnerIdResponse'

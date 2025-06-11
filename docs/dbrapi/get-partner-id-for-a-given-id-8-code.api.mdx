@@ -1,0 +1,71 @@
+---
+id: get-partner-id-for-a-given-id-8-code
+title: "Get partner id for a given id8 code"
+description: "Get partner id for a given id8 code"
+sidebar_label: "Get partner id for a given id8 code"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1PGzEQ/SvWnE2SVqhCewsUIVqpoEBPaQ7Oesgadm1jz4ZGq/3v1dibsKBIReSQKDPj+Xjz3nQQ8LnFSOdO76Do0l8TUENBoUUJpbOEltilvK9Nqcg4O32MzrItlhU2Knnr+uYBimUHtPMIBbj1I5YEEnxwHgMZjDmL+Ymp1BAXKRi7gb6XQIZqNl2hxWDKRW4Nevm/pEafXTiNR7JKsAukMC5oLOEGA/R9vxrXpFsVyGK41qfXOd+hgZ67Cxi9szFX/Dqb8Y/GWAbjGRMo4FxF/HZ6grZ0GrX4cXfzS7wYqoTPmYXR8AZSwr809bUynwQztmWJMY6GWztXo7I8OIbgwtinQlA7kGAIm3hsA6MVXPLjxTDxBzbg99h9Euh9oQz1W1ivkEYIigcXhBIbs0UrjD4TDDZIaJAqp6EA72LqT1EFBUw3R+qBhIhhiwzPsoM21FBAReSL6XTn2nCSvSfs4N4jlm0wtEvR88Tgecvpl6ux+44XmPEYB70uIHNfAu8b1iw5CVY1Ix9Pz+JavMry8q9qfI1j8exXJl+Z/2raE37Wc6EHlxoYwP9+vhDz22txl+YDCYxBRvnLZDaZwXvs7ysT0wsf3NZojAKt9s5YimkRbcQgVElmmw6DFFtHxm6kqJXdtGqDolFWbbBBS/KwRWW18C4afiK0IiWTaa3KJ7RalK5pWjvcmlSGKhTc++gGidgawomY1/Wop+F+idubu3sx3LaYRaiyIBn2VI2nesKdUC1VaGlImxMetC5UQLE+ousMd5z8SVpjzjUqqXjY58dI+wbsA09GZ6GXmZ3dwOclHOXzSkLFtC+W0HXc7u9Q9z2bn1tkMixXErYqGLVmHixXvYQKlcaQKP2USHWRD9PJPXfB4XWbmfnu7vM1yC/mZYmeRrHjzlcjTfI6QGbKFx00mbJBvYBM3wWABJdwSPJJtg72JIICcmX+/ANRmlDr
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get partner id for a given id8 code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getPartnerId4Id8Code"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get partner id for a given id8 code
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"id8Code":{"type":"string"},"nRetry":{"type":"integer"}}}],"title":"GetPartnerId4Id8CodeRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with partner id","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"partnerId":{"type":"integer"}}}],"title":"GetPartnerId4Id8CodeResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

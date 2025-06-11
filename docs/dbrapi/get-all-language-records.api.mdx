@@ -1,0 +1,71 @@
+---
+id: get-all-language-records
+title: "Get all language records"
+description: "Get all language records"
+sidebar_label: "Get all language records"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1PGzEQ/SvWnA2hVdXD3kKLqn6oIKCnNIfJ7pB18drGng2Nov3v1dgRMSgtzYGE+Z7nN28HkR5GSnzuuy00u/yvidRBw3EkDa13TI7FhSFY0yIb72a/kndiS21PA8ov3gaCBvzqF7UMGkL0gSIbSiXXfKVtFZc4GreGadLAhq2YPpGjaNrrMhBMkzgjpeBdKlXenp3JV0epjSbIINDAOSZ6/+6EXOs76tSXm8vv6tFwryy69YhrUpFaH7sEz7Zh+s2zYNG82AOtvbyDZvHaRmlsW0qpWmnlvSV0MGmgGH2sfRgjbkGDYRrSMRgqHC4k+Xq/N0z6tUlkz28m8X+0+0sF01UxxjGtKcoaGMKRWTUEXNNRh4xy1HFP20cfu6M+eYl/M+MbFoymZc0WFnOaW3vAqnDmOT8+ESu09hgdBuLed9BA8CmjgtxDA7P1oTZoSBQ3JK+52MEYLTTQM4dmNtv6MZ4U74k4ZLxE7RgNb3P0PLN+PkrVxbJ23wjfCvh10OEBy71oEHrCSo5Tg8Oh8smmcobXhwO++I1DsFQfXIWzcXc+t9gj+PH8Ws2vPqubvAFokC0LZm9Oz07P4CWSt71JOSNEvzEdJUWuC944TurORzUmigpbNpssElptPBu31gfoB3S4poEcaxUwspME16ngk5EU1SGjzqYVtvfkOtX6YRjdXndyG+5JyeyVHqk0GqZTNbe2mmmvZerq8uZW7XUuFW3AohMCbO4mW93TVuHIPTnely0FnyRIYSS1OiI3BeN0+jMfv5BpwCwr+xf7BwWfIfz0/JU4TbqQbrdn5wJqdi419MLdZgG7nYz2I9ppEvPDSFFYuNSwwWhwJW++WE4aesKOYibofabIh6KKJ7fSXMLtWHj2Qu9FikrGvG0pcBVbD7ysDkugB10I3Oxg8J1ER3wEnf82ABp8Xj8fQ7YVSRuzyEDpLJ8/1dVO/w==
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get all language records"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getLangsAll"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get all language records
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with language records","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"langList":{"type":"array","items":{"type":"object","properties":{"id":{"type":"integer"},"app":{"type":"string"},"page":{"type":"string"},"lang":{"type":"string"},"keyword":{"type":"string"},"text":{"type":"string"}},"title":"Lang"}}}}],"title":"GetLangsAllResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-the-latest-dbr-test-index
+title: "Get the latest DBR test index"
+description: "Get the latest DBR test index"
+sidebar_label: "Get the latest DBR test index"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFlE1v2zAMhv+KwLPysWEYBt/SDxTdgLVIslOWg2yzsVpbUiU6bWD4vw+U3MQNijWHBBEpiu+rh+rA43OLgS5seYCsi3+1xxIy8i1KKKwhNMQh5VytC0XamtljsIbXQlFho2K0ru8eINt0QAeHkIHNH7EgkOC8dehJY0hV9C+MRw15gbw2O+h7CaSp5qUbNOh1sUytQS8/K6rLH5e2xI+q9ttT3duUdqzb86Eeg7MmpEJf53P+KTEUXjuWChlcqIDfv03QFLbEUvxc3f0WL5oqQRhIaFPiK7xzivCVZq5W+syj/4sIbVFgCKPE3NoalYFeAnpv/TimvFcHkKAJm/Ch8JPua968HHRG2b0803iDJKhCUaso6upi+V5dg1TZEjJwNsTWFVWQwWyHtMZAV7m/HTID+j1yq5sOWl9DBhWRy2azg239JEUnHOCbCVi0XtMhZi8iGouWK2+24/CKLUwujZNOZiSoJLDjkDPLEoxqRjGWzNQuT7xfv6rG1Tim8s0+eULq6ChXf7Dx1MFXdmlxfytWURRIYOHJzy/T+XQO5y6vKx3iDuftXpcYBJrSWW0oiAfrRRvQC1WQ3scxk2JvSZudFLUyu1btUDTKqB02aEgKpzwZ3mBK4WzQvEWUipSMS7kqntCUorBN05phcuMxfNHc+2iiRWg14VQs6nrU0/AaiPu71VoML0VI7Ks0B+x1PI1VPeFBqJYqNDSUTQWPIyaUR5F/ME7J4zD9G2FnxhoVh2e4xM/wfGfzEYvRHPYywdgN5G7gnNythIrZzjbQddzjH1/3PS8/t+iZ0K2EvfJa5Xz5m20voUJVoo/wPkV8LtMjMFlzA5xet4nBs6eTn7S0Y1EU6GiUO256Oxo8vgOQCe6sgybB6dULyPidAUiw0YI4KHGtgzdyIIN0Mn/+Ae3PEB4=
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the latest DBR test index"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getTestDbrIndex"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the latest DBR test index
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"id8Code":{"type":"string"}}}],"title":"Id8CodeRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with test index","content":{"text/plain":{"schema":{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-va-switch-status-variant
+title: "Get VA switch status (variant)"
+description: "Get VA switch status (variant)"
+sidebar_label: "Get VA switch status (variant)"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVVFv2zgM/isCn+4AtckOwzD4Ld2GYTtgLZJeX3JBwdhsrNWWPIlOFxj+7wMlt1F32XZYHhpUlMiP/L6PGcDTl54CX7jqAMUQ/zWeKijY96ShdJbJsoSw6xpTIhtnZ5+Ds3IWyppajNGmubyDYj0AHzqCAtz2M5UMGjrvOvJsKKQs5m+KpaZ7gb2xOxhHDWy4kaP3ZMmbcpmgwah/ldRUr9+4ik5k1dChZ0v+Q5VFjWXakZewXRL7w6nYOG5ySHyzWD0YLusnWKNg9hQ6Z0PC8dd8Ll8VhdKbTiYFBVxgoFcvz8iWrqJKfVxdflIPhmt1s1AhZlSBkfsAz8bN9JVnXYPmNwcd+rKkELLOts41hFa6Ju+dz2PoPR5Ag2Fqwyl2MnreyePl1Pf/YGdiYOkessQ/vxtuzQ/42uNtmtbtXYO7k7wdkV4dK/+EzsdGEqHPyXtP/B+e1B979AYt/wkaWuLaVVBA50JsB7mGAma7Y4U5vd6+xBegIZDfk8x9PUDvGyigZu6K2ezgen+WomcSEKyByt4bPsTbi2ibRS/J15s8vBJlpOHll47MJsNpECHBVnyuwWKbxaRtcfTyuAvefcW2ayh37KMW9NFux6PMZfOjqeajlL1zEc40+rcXS7W4+qBWsVvQIBNJw35xPj+fw/cUXNcmxBedd3tTUVBkq84Zy0HdOa/6QF5hyWYfd5NWe8fG7rRq0O563JFq0eKOWrKs1QRUoa1U54KRJ6pCRh2Ptljek61U6dq2t9O6i2W4JiXYszWoQm+YztWiaTJM0wpVV5erazWt15Acj8n9QkKsJl3d00FhzzVZntKmhE+LRaEntT2xRNLww/m/0dKivxbjspjY/aV2n835STDZ4hl1kukwyXoNJ2S90VCL9os1DIPg/Mc34yjHX3oSFaw3YltvcCsCWG9GDTVhRT4q+z5q601afGfXgkGuN30S6He/ObJt0otFWVLH2d0c9yYzpvAAOim/GKBNyvX4ADr+LQA0uDiF6KJ4NsCjeqCAVFk+3wDhbHyM
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get VA switch status (variant)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getVASwitch0e8b4a1"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get VA switch status (variant)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"id8Code":{"type":"string"},"partnerId":{"type":"integer"},"nRetry":{"type":"integer"}}}],"title":"GetVASwitchRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with VA switch status","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"partnerRow":{"type":"object","properties":{"partners_id":{"type":"integer"},"va_status_flag":{"type":"integer"}},"title":"PartnerRow"}}}],"title":"GetVASwitchResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

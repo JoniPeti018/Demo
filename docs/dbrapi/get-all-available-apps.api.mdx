@@ -1,0 +1,71 @@
+---
+id: get-all-available-apps
+title: "Get all available apps"
+description: "Get all available apps"
+sidebar_label: "Get all available apps"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVE1PGzEQ/SvWnA2hVdXD3kKLUD9UUKCnNIfJ7pA1eG1jzwaiaP97NfZCFgQiBxI845l5b97zHiLd95T41Dc7qPb5XxOpgYpjTxpq75gcSwhDsKZGNt7NbpN3cpbqljqUX7wLBBX49S3VDBpC9IEiG0rlrvlFu0le4mjcBoZBAxu2cnROjqKpF2UgGAYJRkrBu1SqfD45ka+GUh1NkEGgglNM9PXLEbnaN9Son1cXf9SD4VZhCMqaJMNMUDA98ixYNK/mR2svbqBafoQk9XVNKU2grL23hA4GDRSjj9MYxog70GCYuvQW/An+M7m8GPHCoD/mNPwWeB93e7/AmyMNw7CaroXnIaTDYGUxL5dwTqzQWoVbNBbXloT9BBo64tY3UEHweRMBuYUKZptSFTQkilsS0pZ76KOFClrmUM1mO9/HoxI9koAMlajuo+Fdzp5nUc17qbhcTcNXstYCcpp0IKrIUYOoANaifQ0Ou0lMMIrKFwd/nD1iF4STg56fWZNSNz63GHn7frpQ88sf6iojAA2CsrD16fjk+ARec3jdmpRvhOi3pqGkyDXBG8dJ3fio+kRRYc1mmz2o1dazcRutLLpNjxtSHTrcUEeOtQoY2ckF16jgk5ErqkFGnY/WWN+Ra1Ttu653o61zG25JyewTu6vUG6ZjNbd2MtP4VKjLi6trNT4jabResaEQm7sJqjvaKey5Jcdj2VLw2eEKI6n1G24uHKfjf9ljIqQOs3vHjb0rvhf8Pi9/8gIMukhuP+pyCU+6XGloRbHVEvZ7GepvtMMgx/c9RdHfSsMWo5F+WX4aWsKGYpbmXRbHt/LsHF1LY0m3fVHYq4dUvF5uzOuaAk9yp8OuJnYS0kEX6VZ76Hwj2REfQOe/FYAGn6FnG+SzPTxJBSooneXzHwoxFcU=
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get all available apps"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getApps"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get all available apps
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with app list","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"appList":{"type":"array","items":{"type":"object","properties":{"app":{"type":"string"}}}}}}],"title":"GetAppsResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

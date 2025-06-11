@@ -1,0 +1,71 @@
+---
+id: get-language-records-by-app-page-and-lang
+title: "Get language records by app, page, and lang"
+description: "Get language records by app, page, and lang"
+sidebar_label: "Get language records by app, page, and lang"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU1v2zAM/SsCz2qTDcMOvqXbMGwr1iLtTlkOisXaam1Jk+h0RuD/PlByG3fzPrEcEkikqEe+p5cDBPzSYaQzp3soDmlpAmooKHQooXSW0BKHlPeNKRUZZxe30Vnei2WNrUrRprm4gWJzAOo9QgFud4slgQQfnMdABmOuYj5gumrMixSMrWAYJJChhrfeosVgynWGBoP8fVE/U1GCVxXOBhplq9mAXSOFKTxjCSsMMAzDdoqQzpWt4lm/8v5SVcirR7wDNxMwemdjBvh8ueQfjbEMxvMIoYAzFfHlixO0pdOoxfuri4/i3lAtGF2nKhQBSxd0hCc8EH6lhW+U+UcGYleWGOOkx51zDSrL/WMILkxjKgTVgwRD2MY52ia8veHD67HvP6CN+zw3kf7gup9UMHqOKvkfBXGH/b0LejbGTPxaySyLpIffa+dhalk9T5XyFukHUYhdL5T3UnBPUiirUwpIaJFqp6EA72IamaIaClhUcxeDhIhhj0z65gBdaKCAmsgXi0XvunCSoycc4C4ill0w1KfsVXrMq47rb7bT8BXLMnM0TTrynG1AAqsYduw+EqxqJzEeA/vM+uhQb76q1jc49ZGHqY+cH5eZ6uM6M3xcP7z05cAgblwCN1L0+mwtVpfvxFXqHSTwfDIVz06Xp0v4nqDr2sR0wge3NxqjQKu9M5aiuHFBdBGDUCWZffJPKfaOjK3kkdVWWVVhi5aY0UCWD1gtvIuGjwitSGWad6q8Q6tF6dq2s6Mlp2uoRsHYJ1YtYmcIT8WqaSaYRpsXlxdX12L8C4jZfFQ2IqYk3cZd3WEvVEc1WhrL5oKPHidUQLGb8bM87nj6ObkLC7JVybdGrv9O2U+G/qiliSEOMiv4MIp+A/Oi30qo+XEUGzgcGPen0AwDb3/pkFWx2UrYq2DUjgWx2Q4SalQaQ9L9XVLeq+zJJ9cMg9ObLsv3u/9JNsJ8YlWW6GmSO4W+nbxc5gVkfhfFAVqnOTuoe5DpuwCQ4NIg0htLe9lQu6z7fDN/vgF3+LlC
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get language records by app, page, and lang"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getLangsByAppPageLang"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get language records by app, page, and lang
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"app":{"type":"string"},"page":{"type":"string"},"lang":{"type":"string"},"nRetry":{"type":"integer"}}}],"title":"GetLangsByAppPageLangRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with language records","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"langList":{"type":"array","items":{"type":"object","properties":{"id":{"type":"integer"},"app":{"type":"string"},"page":{"type":"string"},"lang":{"type":"string"},"keyword":{"type":"string"},"text":{"type":"string"}},"title":"Lang"}}}}],"title":"GetLangsByAppPageLangResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

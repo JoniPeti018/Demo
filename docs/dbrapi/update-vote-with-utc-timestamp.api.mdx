@@ -1,0 +1,71 @@
+---
+id: update-vote-with-utc-timestamp
+title: "Update vote with UTC timestamp"
+description: "Update vote with UTC timestamp"
+sidebar_label: "Update vote with UTC timestamp"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVcFuGzkM/RWBZyV2i6ILzM3pFkVbYFM4yV68PtAzjEfNjKRKlFtjMP++oDSOJ10D3V0fYkSkqEe+9+gBAn1LFPnGNUeohvyvCdRAxSGRhtpZJssSQu87UyMbZxdfo7NyFuuWeszRrrt9hGozAB89QQVu95VqBg0+OE+BDcVSxXym/NSUFzkYu4dx1MCGOzn6QJaCqdcFGoz6V0UPjmlW0limPQUYNXgMbCl8bC6H0fsLUDTYNXE4Xrozjtsz0AffINOfjukZ6yiNBIre2VjAvV4u5auhWAfjZXxQwQ1GevvmimztGmrUp7vbP9R3w61KuaQKFFMnjc4IYPrBC9+h+Z+jj6muKcZZVzvnOkIrHVMILsxjGAIeQYNh6uMlvmaEvZfL66npf8GXsY9uVnLKOqEop/9h9Kd3y/BfDrrkKVFIGfDD/TvFpqfI2HvQ0BO3roEKvIsZKXILFSzS8wOvH181v+Fb0BApHEimtBkghQ4qaJl9tVgcXQpXJXolAUEaqU7B8DFnr7LsV0lqb7bz8J3wWMYyTzrzUAyjQWiHnfhUg8V+FpOuxZHrs5ff/8DedzR33Ik5Pdll+cIdy8kM56yTB5ajPhM2Tf/3m7Vaffmo7nLLUpJCLAN/db28XsLPNNy3JuYbPriDaSgqso13xnJUjy6oFCkorNkc8oLRQpixe606tPuEe1I9WtxTT5a1mnArtI3yLhq5ohpk1Ploh/UT2UbVru+TnXZWfoZbUoJ9tstUTIbpWq26boZp2oPqy+3dvZp2ZCwCwuJWYSK/Jl090VFh4pYsT2VLwedFoDCQ2l0wfRl3vP4ru1A02GP290TxL/X7Ys7PqpntilEXrQ6TtDfwT2lvNbQi/2oDwyAwH0I3jnL8LZGIYLPVcMBgcCf8b7ajhpawoZDV/ZT19a6sqqt7gSDpXSoi/el3Q/ZDubGqa/I8y53D3s68KTSALuqvBuhdI9kBv4POfysADS4PITspnw1wEg9UUF6Wz9+d32fo
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update vote with UTC timestamp"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/updateVote2f1d7a6"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update vote with UTC timestamp
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"vote":{"type":"integer"},"partnerId":{"type":"integer"},"app":{"type":"string"},"nRetry":{"type":"integer"}}}],"title":"UpdateVoteRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with update result","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"info":{"type":"object"},"errortype":{"type":"integer"}}}],"title":"UpdateVoteResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

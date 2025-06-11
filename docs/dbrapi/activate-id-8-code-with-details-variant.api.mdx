@@ -1,0 +1,71 @@
+---
+id: activate-id-8-code-with-details-variant
+title: "Activate id8 code with details (variant)"
+description: "Activate id8 code with details (variant)"
+sidebar_label: "Activate id8 code with details (variant)"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVU1PGzEQ/SvWnFrJEEo/RPcWPlTRSgUBPaU5OPaQNezaiz0biFb736uxF7KgtKXNgYgZj/3mvXmTDgLetRjp0Js1FF361wY0UFBoUYL2jtARp1TTVFYrst5NbqJ3HIu6xFqlbFWdXUMx64DWDUIBfnGDmkBCE3yDgSzGfIv9hump4VykYN0S+l4CWao49AUdBqsvMjTo5d8utebgyBvccquE1lizNWF9PMaV1dvLlDPBW/PbE30/3wCearIrRXiacRwjKVvFJ/w9NxcwNt7FDHh/b4+/DEYdbMOUQgGHKuKnDzvotDdoxNfLs+/i3lIpVL7eeicCxrZiAkbCED7QpKmU/U9JYqs1xjhqcuF9hcoxDxiCD+OcCkGtQYIlrONWYja8nHDxxdD4K3QcGkWzHUtE/UJm6wiXGF4pxyOOLMhz8h9rhDUHggXI1JtcK96sVLDK0VuQUCOV3kABjY+pB0UlFDBRW5/9uPiM7/U+MPywQuZy1kEbKiigJGqKyWTt27CTszuc4F4i6jZYWqfT02SaacvvzObj9CWrnckbH9qole0mgYcDFuxyCU7VoxxzwX6+2GyCkwdVNxWO/fqor9yYbRPKHhsd2VhrE3zhqLET3bVPmAf9jg8vxPT8VFwmSkAC05Zlere7t7sHL8W7Km1MFU3wK2swCnSm8dZRFNc+iDZiGLlIipUn65ZSVMotW7VEUSunllijIykaFchxgTOi8dEm4xlFSqbQQulbdEZoX9etGzZieoZKFIx9tClFbC3hrphW1QjTsGXF+dnllRg2cBy8nn3PSqXXuKtbXAvVUomOhmvzhU8rRaiAYrFlfWSO4+7P5B+e11qlLTGMwD9M/TPGn+ZrtHt41/JUd4MhZvBnQ8wllGygYgZdx+B/hKrvOXzXYuDBn0tIABY8FbN5L6FEZTAkT9ymqTzKa3DniuHw8arNo/3it4p3T66Yao0Njc6OW5iP3M3igMyeKTqo88wHdQ8y/S0AJPhESPJfinXwOFJQQH6ZP78AilyRLw==
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Activate id8 code with details (variant)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/activateId8CodeDetails5b9e3c2"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Activate id8 code with details (variant)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"id8Code":{"type":"string"},"udid":{"type":"string"},"iosDevice":{"type":"string"},"androidDevice":{"type":"string"}}}],"title":"ActivateId8CodeDetailsRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with activation result","content":{"text/plain":{"schema":{"allOf":[{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"},{"type":"object","properties":{"activated":{"type":"boolean"},"secCode":{"type":"integer"}}}],"title":"ActivateId8CodeDetailsResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

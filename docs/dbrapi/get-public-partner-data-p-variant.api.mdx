@@ -1,0 +1,71 @@
+---
+id: get-public-partner-data-p-variant
+title: "Get public partner data (P variant)"
+description: "Get public partner data (P variant)"
+sidebar_label: "Get public partner data (P variant)"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1v2zAM/SsCTxugfHQbevAt3YqiG7AGSXfKclBsNlZrS6pEpw0M//eBkps4QbEthwQhKZLv8ZEteHxuMNCVLfaQtfGv9lhARr5BCbk1hIbYpZyrdK5IWzN5DNawLeQl1ip6q+ruAbJVC7R3CBnYzSPmBBKctw49aQwpi/6BsVQfF8hrs4Wuk0CaKjbdoEGv80VqDTr5r6ROeTLob4tBXm0It+ih67r1MfX8LfKQvOPKHoOzJqRsn6ZT/ikw5F47xgsZXKmAl19GaHJbYCG+L+9+ihdNpehri0KRghPCCF9p4iqlz6j6O5bQ5DmGMAjcWFuhMtBJQO+tH/qU92oPEjRhHd5jdUDrNT9e9Egj8E6eobxBEq7ZVDo/wSU+zMVOea0MfQQJNVJpC8jA2RABKCohg8kWaX6hPuPlZlqAhIB+h9ztqoXGV5BBSeSyyWRvGz9K3hE7eEAB88Zr2sfoWRTJrOG0q/XQvWQWE1HDoCMfSV4SmHTYsKolGFUPfIya9bs4Kv/6VdWOOTrq841BORTXtOPEDzYW7Fn9drUQs/mtWEY8IIExJzYvxtPxFM45vi91iC+ctztdYBBoCme1oSAerBdNQC9UTnoXd02KnSVttlJUymwbtUVRK6O2WKMheRiTMoVwNmh+Emcmo2mj8ic0hchtXTemX99YhkoU3PtgrUVoNOFYzKpq0FN/EsT8bnkv+nMRkvZV2gOmOVZjVE+4F6qhEg31aVPCw4oJ5VFs3lmnxHgY/45SZ23VKq5OP7//E+cJ2QddDHaxk0mNba/bFZzodi2hZFlnK2hbbvOXr7qOzc8NetbnWkKst+H5r9adhBJVgT5K9ymK52u6AqN7rs7hVZMUeHZC+bSlF7M8R0eD2GHH68HO8RhAJmlnLdS24GivXkDG7wxAgo3445pEWwtv4oEMUmX+/AEqIhJJ
+sidebar_class_name: "post api-method"
+info_path: docs/dbrapi/dbr-api-server
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get public partner data (P variant)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getP1a3e6b0d"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get public partner data (P variant)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"apiKey":{"type":"string"}},"title":"GenericRequest"},{"type":"object","properties":{"partnerId":{"type":"integer"}}}],"title":"PartnerIdRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Base64-encoded JSON with partner data","content":{"text/plain":{"schema":{"type":"object","properties":{"success":{"type":"boolean"},"errors":{"type":"array","items":{"type":"string"}}},"title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

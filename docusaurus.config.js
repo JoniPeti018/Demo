@@ -94,6 +94,15 @@ const config = {
             },
             // Opcionális: downloadButton: true,
           },
+          dbr: {  // Egyedi azonosító az API doksinak
+            specPath: 'openapi/dbr-api.yaml', // Az OpenAPI fájl elérési útja
+            outputDir: 'docs/dbrapi', // A generált Markdown fájlok helye
+            sidebarOptions: {
+              groupPathsBy: 'tag',  // Csoportosítás tagek alapján az oldalsávban
+              // További opciók a plugin dokumentációja szerint
+            },
+            // Opcionális: downloadButton: true,
+          },
         }
       }
     ]
@@ -169,6 +178,12 @@ const config = {
             type: 'docSidebar', // Ha külön oldalsávot használsz az API-hoz
             sidebarId: 'myApiSidebar', // Az API oldalsávjának ID-ja a sidebars.js-ből
             label: 'Petstore API',
+            position: 'left',
+          },
+          {
+            type: 'docSidebar', // Ha külön oldalsávot használsz az API-hoz
+            sidebarId: 'dbrApiSidebar', // Az API oldalsávjának ID-ja a sidebars.js-ből
+            label: 'DBR API',
             position: 'left',
           },
           {
