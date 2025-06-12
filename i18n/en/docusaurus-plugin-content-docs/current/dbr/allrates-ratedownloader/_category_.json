@@ -1,0 +1,8 @@
+{
+  "label": "Allrates - Rate Downloader",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Allrates - Rate Downloader is a tool for downloading and managing exchange rates from various sources. It provides a user-friendly interface to access and manipulate rate data efficiently."
+  }
+}

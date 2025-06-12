@@ -1,0 +1,8 @@
+{
+  "label": "DBR PP - Database Watcher",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "DBR PP - Database Watcher is a tool designed to monitor and manage changes in databases formatted in DBR. It provides functionalities for tracking updates, ensuring data integrity, and facilitating real-time data management."
+  }
+}

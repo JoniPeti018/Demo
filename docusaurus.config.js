@@ -30,12 +30,22 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // Többnyelvű konfiguráció
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'hu', // Magyar alapértelmezett nyelv
+    locales: ['hu', 'en'], // Támogatott nyelvek
+    localeConfigs: {
+      hu: {
+        label: 'Magyar',
+        direction: 'ltr',
+        htmlLang: 'hu-HU',
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+      },
+    },
   },
 
   // Mermaid támogatás engedélyezése
@@ -51,10 +61,16 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           docItemComponent: "@theme/ApiItem",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: ({ locale, docPath }) => {
+            if (locale !== 'hu') {
+              return `https://github.com/JoniPeti018/Demo/tree/main/i18n/${locale}/docusaurus-plugin-content-docs/current/${docPath}`;
+            }
+            return `https://github.com/JoniPeti018/Demo/tree/main/docs/${docPath}`;
+          },
+          editCurrentVersion: true,
+          editLocalizedFiles: true,
+          path: 'docs',
+          routeBasePath: 'docs',
         },
         blog: {
           showReadingTime: true,
@@ -170,22 +186,24 @@ const config = {
           {
             type: 'docSidebar',
             sidebarId: 'dbrSidebar',
-            to: '/docs/dbr/allrates-ratedownloader/allrates_hu',
             position: 'left',
             label: 'DBR',
           },
           {
-            type: 'docSidebar', // Ha külön oldalsávot használsz az API-hoz
-            sidebarId: 'dbrApiSidebar', // Az API oldalsávjának ID-ja a sidebars.js-ből
+            type: 'docSidebar',
+            sidebarId: 'dbrApiSidebar',
             label: 'DBR API',
             position: 'left',
           },
-
           {
-            type: 'docSidebar', // Ha külön oldalsávot használsz az API-hoz
-            sidebarId: 'myApiSidebar', // Az API oldalsávjának ID-ja a sidebars.js-ből
+            type: 'docSidebar',
+            sidebarId: 'myApiSidebar',
             label: 'Petstore API (minta)',
             position: 'left',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
           {
             href: 'https://github.com/facebook/docusaurus',
@@ -202,7 +220,7 @@ const config = {
             items: [
               {
                 label: 'DBR',
-                to: '/docs/dbr/allrates-ratedownloader/allrates_hu',
+                to: '/docs/dbr/allrates-ratedownloader/allrates',
               },
               {
                 label: 'DBR API',

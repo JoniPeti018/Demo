@@ -1,0 +1,38 @@
+{
+    "version.label": {
+        "message": "Next",
+        "description": "The label for the version"
+    },
+    "sidebar.dbrSidebar.category.Allrates - Árfolyam letöltő": {
+        "message": "Allrates - Rate Downloader",
+        "description": "The label for the Allrates category in sidebar dbrSidebar"
+    },
+    "sidebar.dbrSidebar.category.DBR coin óránkénti fogadó": {
+        "message": "DBR coin hourly betting",
+        "description": "The label for the DBR coin hourly betting category in sidebar dbrSidebar"
+    },
+    "sidebar.dbrSidebar.category.DBR motor": {
+        "message": "DBR engine",
+        "description": "The label for the DBR engine category in sidebar dbrSidebar"
+    },
+    "sidebar.dbrSidebar.category.DBR PP - Adatbázis műveletek": {
+        "message": "DBR PP - Database operations",
+        "description": "The label for the DBR PP - Database operations category in sidebar dbrSidebar"
+    },
+    "sidebar.dbrSidebar.category.DBR PP - adatbázis figyelő": {
+        "message": "DBR PP - Database watcher",
+        "description": "The label for the DBR PP - Database watcher category in sidebar dbrSidebar"
+    },
+    "sidebar.dbrSidebar.category.Jutalomkioszás (h/d)": {
+        "message": "Reward distribution (h/d)",
+        "description": "The label for the Reward distribution (h/d) category in sidebar dbrSidebar"
+    },
+    "sidebar.dbrSidebar.category.Mobilapp Backend": {
+        "message": "Mobile app Backend",
+        "description": "The label for the Mobile app Backend category in sidebar dbrSidebar"
+    },
+    "sidebar.dbrSidebar.category.Mobilapp Frontend": {
+        "message": "Mobile app Frontend",
+        "description": "The label for the Mobile app Frontend category in sidebar dbrSidebar"
+    }
+}
