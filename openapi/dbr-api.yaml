@@ -3,10 +3,12 @@ info:
   title: DBR API Server
   version: 1.0.0
   description: |
-    This API provides endpoints for user activation, voting, language management, partner and position data, and backend communication for the DBR application suite. All endpoints require POST requests with a JSON body and API key authentication. All responses are base64-encoded JSON strings.
-
+    The DBR API provides endpoints for user activation, voting, language management, partner and position data, and backend communication for the DBR application suite.
+    - All endpoints require POST requests with a JSON body and API key authentication.
+    - All responses are base64-encoded JSON strings.
+    - The API is designed for integration with mobile and web clients, supporting secure and efficient data exchange.
 servers:
-  - url: http://your-server-url
+  - url: https://your-server-url
 
 components:
   securitySchemes:
@@ -78,12 +80,13 @@ components:
         va_status_flag:
           type: integer
 
-    # Generic request/response schemas for endpoints
     GenericRequest:
       type: object
       properties:
         apiKey:
           type: string
+      required:
+        - apiKey
 
     Id8CodeRequest:
       allOf:
@@ -92,6 +95,8 @@ components:
           properties:
             id8Code:
               type: string
+          required:
+            - id8Code
 
     PartnerIdRequest:
       allOf:
@@ -100,6 +105,8 @@ components:
           properties:
             partnerId:
               type: integer
+          required:
+            - partnerId
 
     NRetryRequest:
       type: object
@@ -112,6 +119,10 @@ components:
     GetAllLast2RowsRequest:
       allOf:
         - $ref: '#/components/schemas/Id8CodeRequest'
+        - type: object
+          properties:
+            id8Code:
+              type: string
 
     GetAllLast2RowsResponse:
       allOf:
@@ -515,6 +526,7 @@ paths:
   /getAllLast2Rows:
     post:
       summary: Get the last 2 rows of rates data
+      description: Returns the two most recent rate rows for the authenticated user.
       requestBody:
         required: true
         content:
@@ -583,6 +595,7 @@ paths:
   /activateId8Code:
     post:
       summary: Activate an id8 code
+      description: Activates a user account using an id8 code and returns activation status.
       requestBody:
         required: true
         content:

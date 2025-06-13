@@ -220,7 +220,7 @@ const config = {
             items: [
               {
                 label: 'DBR',
-                to: '/docs/dbr/allrates-ratedownloader/allrates',
+                to: '/docs/dbr/allrates',
               },
               {
                 label: 'DBR API',
