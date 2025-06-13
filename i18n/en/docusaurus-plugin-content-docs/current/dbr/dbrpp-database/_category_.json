@@ -1,8 +1,0 @@
-{
-  "label": "DBR PP - Database Operations",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "DBR PP - Database Operations is a tool designed for managing and processing databases in the DBR format. It provides functionalities for reading, writing, and manipulating database files efficiently, making it easier to handle large datasets."
-  }
-}

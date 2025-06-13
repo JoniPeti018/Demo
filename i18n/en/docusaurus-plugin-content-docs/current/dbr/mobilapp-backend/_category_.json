@@ -1,8 +1,0 @@
-{
-  "label": "Mobilapp Backend",
-  "position": 7,
-  "link": {
-    "type": "generated-index",
-    "description": "Mobilapp Backend is a backend service designed to support mobile applications. It provides essential functionalities such as user authentication, data storage, and API endpoints to facilitate seamless communication between the mobile app and the server."
-  }
-}

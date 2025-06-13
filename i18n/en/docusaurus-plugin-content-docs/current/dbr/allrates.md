@@ -1,12 +1,13 @@
 ---
-title: rc.smarti.me documentation
+title: Allrates - Rate Downloader
+position: 1
 ---
 
-# RC Smarti Me Documentation
+# rc.smarti.me documentation
 
 ## Project Overview
 
-RC Smarti Me is a Python-based project designed to interact with multiple financial APIs (Binance, Bitfinex, Bitstamp, Capital) to fetch real-time data, process it, and store it in a database. It provides tools for logging, error handling, and database management, ensuring seamless integration and data reliability.
+rc.smarti.me is a Python-based project designed to interact with multiple financial APIs (Binance, Bitfinex, Bitstamp, Capital) to fetch real-time data, process it, and store it in a database. It provides tools for logging, error handling, and database management, ensuring seamless integration and data reliability.
 
 This project is ideal for developers and financial analysts who need to work with real-time financial data and perform historical analysis.
 

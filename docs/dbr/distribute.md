@@ -1,5 +1,6 @@
 ---
-title: jutalomelosztó rendszer
+title: Jutalomkioszás (h/d)
+position: 6
 ---
 
 # Jutalomelosztó Rendszer

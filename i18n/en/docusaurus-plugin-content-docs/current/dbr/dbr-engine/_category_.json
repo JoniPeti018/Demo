@@ -1,8 +1,0 @@
-{
-  "label": "DBR Engine",
-  "position": 4,
-  "link": {
-    "type": "generated-index",
-    "description": "DBR Engine is a powerful tool for managing and processing data in the DBR format. It provides functionalities for reading, writing, and manipulating DBR files efficiently."
-  }
-}

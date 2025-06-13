@@ -1,12 +1,12 @@
 ---
-title: rc.smarti.me dokumentáció
+title: Allrates - Árfolyam letöltő
+position: 1
 ---
-
-# RC Smarti Me Dokumentáció
+# rc.smarti.me dokumentáció
 
 ## Projekt Áttekintés
 
-Az RC Smarti Me egy Python-alapú projekt, amely több pénzügyi API-val (Binance, Bitfinex, Bitstamp, Capital) kommunikál valós idejű adatok lekérésére, feldolgozására és adatbázisba mentésére. Eszközöket biztosít naplózáshoz, hibakezeléshez és adatbázis-kezeléshez, ezzel biztosítva a zökkenőmentes integrációt és az adatok megbízhatóságát.
+Az rc.smarti.me egy Python-alapú projekt, amely több pénzügyi API-val (Binance, Bitfinex, Bitstamp, Capital) kommunikál valós idejű adatok lekérésére, feldolgozására és adatbázisba mentésére. Eszközöket biztosít naplózáshoz, hibakezeléshez és adatbázis-kezeléshez, ezzel biztosítva a zökkenőmentes integrációt és az adatok megbízhatóságát.
 
 A projekt ideális fejlesztők és pénzügyi elemzők számára, akik valós idejű pénzügyi adatokkal dolgoznak és történeti elemzéseket végeznek.
 

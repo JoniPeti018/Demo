@@ -1,5 +1,6 @@
 ---
-title: revard distribution system
+title: DBR Hourly & Daily Rewards
+position: 6
 ---
 
 # Reward Distribution System

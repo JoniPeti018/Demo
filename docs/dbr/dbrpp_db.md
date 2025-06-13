@@ -1,5 +1,6 @@
 ---
-title: dbrpp_db projekt dokumentáció
+title: DBR PP - Adatbázis műveletek
+position: 4
 ---
 
 # dbrpp_db Projekt Dokumentáció

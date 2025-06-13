@@ -1,5 +1,6 @@
 ---
-title: dbrpp_db project documentation
+title: DBR PP - Database Operations
+position: 4
 ---
 
 # dbrpp_db Project Documentation

@@ -1,3 +1,7 @@
+---
+title: DBR coin óránkénti fogadó
+position: 3
+---
 # DBRCoin API Szerver
 
 ## Áttekintés

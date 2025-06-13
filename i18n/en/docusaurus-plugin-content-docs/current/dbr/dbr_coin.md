@@ -1,3 +1,7 @@
+---
+title: DBR Hourly Betting
+position: 3
+---
 # DBRCoin API Server
 
 ## Overview

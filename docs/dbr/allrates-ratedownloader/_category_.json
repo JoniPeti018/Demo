@@ -1,8 +1,0 @@
-{
-  "label": "Allrates - Árfolyam letöltő",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Az Allrates egy egyszerű eszköz, amely lehetővé teszi a felhasználók számára, hogy letöltsék a valuták árfolyamait különböző időszakokra. A letöltött adatok CSV formátumban érhetők el, és könnyen integrálhatók más alkalmazásokba vagy elemzésekbe."
-  }
-}

@@ -1,5 +1,6 @@
 ---
-title: dbrpp_watcher project documentation
+title: DBR PP - Database Watcher
+position: 5
 ---
 
 # dbrpp_watcher Project Documentation
