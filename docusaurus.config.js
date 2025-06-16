@@ -118,6 +118,13 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
 
+      algolia: {
+        appId: '8SL41MHSPF',
+        apiKey: '59a6f54d80738fa8dbe1be15a20f9d61', // Cseréld ki a saját kulcsodra!
+        indexName: 'jonipeti018io',
+        insights: true, // opcionális
+        contextualSearch: true, // opcionális
+      },
       // Mermaid konfiguráció (opcionális)
       mermaid: {
         theme: { light: 'neutral', dark: 'dark' },
@@ -188,11 +195,6 @@ const config = {
           },
           {
             type: 'localeDropdown',
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
             position: 'right',
           },
         ],
